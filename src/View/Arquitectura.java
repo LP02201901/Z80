@@ -5,6 +5,8 @@
  */
 package View;
 
+import java.awt.Color;
+
 /**
  *
  * @author Andrey
@@ -17,51 +19,280 @@ public class Arquitectura extends javax.swing.JFrame {
     public Arquitectura() {
         initComponents();
         InstructionRegister.setOpaque(true);
-        InstructionRegister.setOpaque(true);
-Wp.setOpaque(true);
-Zp.setOpaque(true);
-Cp.setOpaque(true);
-Bp.setOpaque(true);
-Ep.setOpaque(true);
-Dp.setOpaque(true);
-Lp.setOpaque(true);
-Hp.setOpaque(true);
-W.setOpaque(true);
-Z.setOpaque(true);
-B.setOpaque(true);
-InstructionDecoder.setOpaque(true);
-C.setOpaque(true);
-D.setOpaque(true);
-E.setOpaque(true);
-L.setOpaque(true);
-H.setOpaque(true);
-IX.setOpaque(true);
-SP.setOpaque(true);
-PC.setOpaque(true);
-IY.setOpaque(true);
-mm12.setOpaque(true);
-ControlLogic.setOpaque(true);
-A.setOpaque(true);
-Ap.setOpaque(true);
-Fp.setOpaque(true);
-F.setOpaque(true);
-TEMP.setOpaque(true);
-ACU.setOpaque(true);
-ALU.setOpaque(true);
-jLabel37.setOpaque(true);
-jLabel38.setOpaque(true);
-jLabel39.setOpaque(true);
-I.setOpaque(true);
-jLabel40.setOpaque(true);
-jLabel41.setOpaque(true);
-R.setOpaque(true);
-mm11.setOpaque(true);
-jLabel7.setOpaque(true);
-Mux1.setOpaque(true);
-Mux2.setOpaque(true);
-jPanel1.setOpaque(true);
-jPanel2.setOpaque(true);
-jPanel3.setOpaque(true);
+        Wp.setOpaque(true);
+        Zp.setOpaque(true);
+        Cp.setOpaque(true);
+        Bp.setOpaque(true);
+        Ep.setOpaque(true);
+        Dp.setOpaque(true);
+        Lp.setOpaque(true);
+        Hp.setOpaque(true);
+        W.setOpaque(true);
+        Z.setOpaque(true);
+        B.setOpaque(true);
+        InstructionDecoder.setOpaque(true);
+        C.setOpaque(true);
+        D.setOpaque(true);
+        E.setOpaque(true);
+        L.setOpaque(true);
+        H.setOpaque(true);
+        IX.setOpaque(true);
+        SP.setOpaque(true);
+        PC.setOpaque(true);
+        IY.setOpaque(true);
+        Mm12.setOpaque(true);
+        ControlLogic.setOpaque(true);
+        A.setOpaque(true);
+        Ap.setOpaque(true);
+        Fp.setOpaque(true);
+        F.setOpaque(true);
+        TEMP.setOpaque(true);
+        ACU.setOpaque(true);
+        ALU.setOpaque(true);
+        jLabel37.setOpaque(true);
+        jLabel38.setOpaque(true);
+        jLabel39.setOpaque(true);
+        I.setOpaque(true);
+        jLabel40.setOpaque(true);
+        jLabel41.setOpaque(true);
+        R.setOpaque(true);
+        Mm11.setOpaque(true);
+        jLabel7.setOpaque(true);
+        Mux1.setOpaque(true);
+        Mux2.setOpaque(true);
+        jPanel1.setOpaque(true);
+        jPanel2.setOpaque(true);
+        jPanel3.setOpaque(true);
+        Control(false, false, false, false, false, false, false, false, false, false,
+            false, false, false, false, false, false, false, false,
+            false, false, false, false, false, false, false, false, false,
+             false, false, false, false, false, false, false, false, false);
+        /*Control(true, true, true, true, true, true, true, true, true, true,
+            true, true, true, true, true, true, true, true,
+            true, true, true, true, true, true, true, true, true,
+             true, true, true, true, true, true, true, true, true);*/
+    }
+
+    void Control(boolean instructionregister, boolean wp, boolean zp, boolean cp, boolean bp, boolean ep, boolean dp, boolean lp, boolean hp, boolean w,
+            boolean z, boolean b, boolean instructiondecoder, boolean c, boolean d, boolean e, boolean l, boolean h,
+            boolean ix, boolean sp, boolean pc, boolean iy, boolean mm12, boolean controllogic, boolean a, boolean ap, boolean fp,
+             boolean f, boolean temp, boolean acu, boolean alu, boolean i, boolean r, boolean mm11, boolean mux1, boolean mux2) {
+        if (wp) {
+            Wp.setBackground(Color.red);
+        } else {
+            Wp.setBackground(Color.white);
+        }
+
+        if (instructionregister) {
+            InstructionRegister.setBackground(Color.red);
+        } else {
+            InstructionRegister.setBackground(Color.white);
+        }
+
+        if (zp) {
+            Zp.setBackground(Color.red);
+        } else {
+            Zp.setBackground(Color.white);
+        }
+
+        if (cp) {
+            Cp.setBackground(Color.red);
+        } else {
+            Cp.setBackground(Color.white);
+        }
+
+        if (bp) {
+            Bp.setBackground(Color.red);
+        } else {
+            Bp.setBackground(Color.white);
+        }
+
+        if (ep) {
+            Ep.setBackground(Color.red);
+        } else {
+            Ep.setBackground(Color.white);
+        }
+
+        if (dp) {
+            Dp.setBackground(Color.red);
+        } else {
+            Dp.setBackground(Color.white);
+        }
+
+        if (lp) {
+            Lp.setBackground(Color.red);
+        } else {
+            Lp.setBackground(Color.white);
+        }
+
+        if (hp) {
+            Hp.setBackground(Color.red);
+        } else {
+            Hp.setBackground(Color.white);
+        }
+
+        if (w) {
+            W.setBackground(Color.red);
+        } else {
+            W.setBackground(Color.white);
+        }
+
+        if (z) {
+            Z.setBackground(Color.red);
+        } else {
+            Z.setBackground(Color.white);
+        }
+
+        if (b) {
+            B.setBackground(Color.red);
+        } else {
+            B.setBackground(Color.white);
+        }
+
+        if (instructiondecoder) {
+            InstructionDecoder.setBackground(Color.red);
+        } else {
+            InstructionDecoder.setBackground(Color.white);
+        }
+
+        if (c) {
+            C.setBackground(Color.red);
+        } else {
+            C.setBackground(Color.white);
+        }
+
+        if (d) {
+            D.setBackground(Color.red);
+        } else {
+            D.setBackground(Color.white);
+        }
+
+        if (d) {
+            E.setBackground(Color.red);
+        } else {
+            E.setBackground(Color.white);
+        }
+
+        if (l) {
+            L.setBackground(Color.red);
+        } else {
+            L.setBackground(Color.white);
+        }
+
+        if (h) {
+            H.setBackground(Color.red);
+        } else {
+            H.setBackground(Color.white);
+        }
+
+        if (ix) {
+            IX.setBackground(Color.red);
+        } else {
+            IX.setBackground(Color.white);
+        }
+
+        if (sp) {
+            SP.setBackground(Color.red);
+        } else {
+            SP.setBackground(Color.white);
+        }
+
+        if (pc) {
+            PC.setBackground(Color.red);
+        } else {
+            PC.setBackground(Color.white);
+        }
+
+        if (iy) {
+            IY.setBackground(Color.red);
+        } else {
+            IY.setBackground(Color.white);
+        }
+
+        if (mm12) {
+            Mm12.setBackground(Color.red);
+        } else {
+            Mm12.setBackground(Color.white);
+        }
+
+        if (controllogic) {
+            ControlLogic.setBackground(Color.red);
+        } else {
+            ControlLogic.setBackground(Color.white);
+        }
+
+        if (a) {
+            A.setBackground(Color.red);
+        } else {
+            A.setBackground(Color.white);
+        }
+
+        if (ap) {
+            Ap.setBackground(Color.red);
+        } else {
+            Ap.setBackground(Color.white);
+        }
+
+        if (fp) {
+            Fp.setBackground(Color.red);
+        } else {
+            Fp.setBackground(Color.white);
+        }
+
+        if (f) {
+            F.setBackground(Color.red);
+        } else {
+            F.setBackground(Color.white);
+        }
+
+        if (temp) {
+            TEMP.setBackground(Color.red);
+        } else {
+            TEMP.setBackground(Color.white);
+        }
+
+        if (acu) {
+            ACU.setBackground(Color.red);
+        } else {
+            ACU.setBackground(Color.white);
+        }
+
+        if (alu) {
+            ALU.setBackground(Color.red);
+        } else {
+            ALU.setBackground(Color.white);
+        }
+
+        if (i) {
+            I.setBackground(Color.red);
+        } else {
+            I.setBackground(Color.white);
+        }
+
+        if (r) {
+            R.setBackground(Color.red);
+        } else {
+            R.setBackground(Color.white);
+        }
+
+        if (mm11) {
+            Mm11.setBackground(Color.red);
+        } else {
+            Mm11.setBackground(Color.white);
+        }
+
+        if (mux1) {
+            Mux1.setBackground(Color.red);
+        } else {
+            Mux1.setBackground(Color.white);
+        }
+
+        if (mux2) {
+            Mux2.setBackground(Color.red);
+        } else {
+            Mux2.setBackground(Color.white);
+        }
+
     }
 
     /**
@@ -79,12 +310,11 @@ jPanel3.setOpaque(true);
         ControlLogic = new javax.swing.JLabel();
         I = new javax.swing.JLabel();
         R = new javax.swing.JLabel();
-        mm11 = new javax.swing.JLabel();
+        Mm11 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         Mux1 = new javax.swing.JLabel();
         Mux2 = new javax.swing.JLabel();
@@ -108,7 +338,7 @@ jPanel3.setOpaque(true);
         E = new javax.swing.JLabel();
         L = new javax.swing.JLabel();
         H = new javax.swing.JLabel();
-        mm12 = new javax.swing.JLabel();
+        Mm12 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         A = new javax.swing.JLabel();
@@ -148,9 +378,9 @@ jPanel3.setOpaque(true);
         R.setText("R");
         R.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        mm11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        mm11.setText("±1");
-        mm11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Mm11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Mm11.setText("±1");
+        Mm11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Control Section");
@@ -163,8 +393,6 @@ jPanel3.setOpaque(true);
 
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/flecha2.PNG"))); // NOI18N
-
-        jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -186,10 +414,7 @@ jPanel3.setOpaque(true);
                         .addComponent(jLabel39))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(62, 62, 62)
-                        .addComponent(jLabel38))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(jLabel1)))
+                        .addComponent(jLabel38)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -200,7 +425,7 @@ jPanel3.setOpaque(true);
                         .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(8, 8, 8)
-                        .addComponent(mm11, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Mm11, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -225,10 +450,8 @@ jPanel3.setOpaque(true);
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel40)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(mm11, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Mm11, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
                 .addComponent(jLabel7))
         );
 
@@ -342,9 +565,9 @@ jPanel3.setOpaque(true);
         H.setText("H");
         H.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 153, 153)));
 
-        mm12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        mm12.setText("±1");
-        mm12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Mm12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Mm12.setText("±1");
+        Mm12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/V+.PNG"))); // NOI18N
@@ -402,7 +625,7 @@ jPanel3.setOpaque(true);
                                 .addComponent(Mux2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(125, 125, 125))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(mm12, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Mm12, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(83, 83, 83))))
@@ -459,7 +682,7 @@ jPanel3.setOpaque(true);
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(117, 117, 117)
-                                .addComponent(mm12, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(Mm12, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addComponent(IX)
@@ -645,6 +868,8 @@ jPanel3.setOpaque(true);
     private javax.swing.JLabel InstructionRegister;
     private javax.swing.JLabel L;
     private javax.swing.JLabel Lp;
+    private javax.swing.JLabel Mm11;
+    private javax.swing.JLabel Mm12;
     private javax.swing.JLabel Mux1;
     private javax.swing.JLabel Mux2;
     private javax.swing.JLabel PC;
@@ -655,7 +880,6 @@ jPanel3.setOpaque(true);
     private javax.swing.JLabel Wp;
     private javax.swing.JLabel Z;
     private javax.swing.JLabel Zp;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
@@ -665,7 +889,5 @@ jPanel3.setOpaque(true);
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel mm11;
-    private javax.swing.JLabel mm12;
     // End of variables declaration//GEN-END:variables
 }
