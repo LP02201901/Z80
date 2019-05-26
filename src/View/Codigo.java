@@ -5,6 +5,9 @@
  */
 package View;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Andrey
@@ -28,19 +31,19 @@ public class Codigo extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        txtCodigo = new javax.swing.JTextArea();
+        btnEjecutar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txtCodigo.setColumns(20);
+        txtCodigo.setRows(5);
+        jScrollPane1.setViewportView(txtCodigo);
 
-        jButton1.setText("Ejecutar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnEjecutar.setText("Ejecutar");
+        btnEjecutar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnEjecutarActionPerformed(evt);
             }
         });
 
@@ -54,7 +57,7 @@ public class Codigo extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(162, 162, 162)
-                .addComponent(jButton1)
+                .addComponent(btnEjecutar)
                 .addContainerGap(165, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -63,16 +66,22 @@ public class Codigo extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
+                .addComponent(btnEjecutar)
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnEjecutarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEjecutarActionPerformed
+        //String code=;
+        String [] lineas;
+        lineas = txtCodigo.getText().split("\n");
+        ArrayList<String> lineasList = new ArrayList<String>();
+        for(int i=0;i<lineas.length;i++){
+            lineasList.add(lineas[i]);
+        }
+    }//GEN-LAST:event_btnEjecutarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -110,8 +119,8 @@ public class Codigo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnEjecutar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea txtCodigo;
     // End of variables declaration//GEN-END:variables
 }
