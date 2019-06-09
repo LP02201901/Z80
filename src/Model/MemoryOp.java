@@ -11,8 +11,18 @@ package Model;
  */
 public class MemoryOp {
     private byte z80Ram[] = null;
+    public byte address = 0;
     
     public MemoryOp() {
         z80Ram = new byte[0x10000];
+    }
+    
+    public void writeByte(byte opCode){
+        z80Ram[address] = opCode;
+        
+    }
+    
+    public byte[] readByte(){
+        return z80Ram;
     }
 }
