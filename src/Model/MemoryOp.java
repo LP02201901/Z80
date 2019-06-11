@@ -9,20 +9,36 @@ package Model;
  *
  * @author Sunny
  */
-public class MemoryOp {
-    private byte z80Ram[] = null;
-    public byte address = 0;
+public class MemoryOp implements IMemory 
+{
+    private int[] z80Ram;
+    public int address;
     
     public MemoryOp() {
-        z80Ram = new byte[0x10000];
+        z80Ram = new int[100000];
     }
     
-    public void writeByte(byte opCode){
-        z80Ram[address] = opCode;
-        
+    public int[] readMemory() {
+         return z80Ram;
     }
-    
-    public byte[] readByte(){
-        return z80Ram;
+
+    @Override
+    public int readByte(int address) {
+         return z80Ram[address];
+    }
+
+    @Override
+    public int readWord(int address) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void writeByte(int address, int data) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void writeWord(int address, int data) {
+         z80Ram[address] = data;
     }
 }
