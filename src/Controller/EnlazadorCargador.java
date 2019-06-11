@@ -16,7 +16,8 @@ import Model.MemoryOp;
  * @author Sunny
  */
 public class EnlazadorCargador {
-    MemoryOp IMemory = new MemoryOp();
+    MemoryOp MemoryZ80 = new MemoryOp();
+    public int address = 0;
     public void readAssembler(ArrayList<String> lineaslist){
         RelocatorHexMemory RHM = new RelocatorHexMemory();
         String codeLine;
@@ -32,10 +33,9 @@ public class EnlazadorCargador {
             RHM.addNewField(y, codeLine);
             y += 12;
         }
-        /*for(int i=0;IMemory.readByte().length > i;i++){
-            System.out.println(IMemory.readByte()[i]);
-        }*/
-    
+        for(int i=0;MemoryZ80.readMemory().length > i;i++){
+            System.out.println(MemoryZ80.readByte(i));
+        }
     }
     
     public String relativeDirections(String instruction){
@@ -46,9 +46,8 @@ public class EnlazadorCargador {
                 switch(opcode[1]){
                     case "A":
                         if (opcode[2].equals("B")){
-                            byte word = (byte) 0x78;
-                            IMemory.writeByte(word);
-                            IMemory.address += 1;
+                            MemoryZ80.writeByte(address,0x78);
+                            address += 1;
                             return Integer.toString(0x78);
                         }
                         if (opcode[2].equals("C")){
@@ -64,10 +63,10 @@ public class EnlazadorCargador {
                         if (Integer.parseInt(opcode[2]) < 255){
                             byte word = (byte) 0x06;
                             byte value = (byte) Integer.parseInt(opcode[2]);
-                            IMemory.writeByte(word);
-                            IMemory.address += 1;
-                            IMemory.writeByte(value);
-                            IMemory.address += 1;
+                            MemoryZ80.writeByte(address,word);
+                            address += 1;
+                            MemoryZ80.writeByte(address,value);
+                            address += 1;
                             return Integer.toString(0x06);
                         }
                         break;
@@ -76,12 +75,10 @@ public class EnlazadorCargador {
                             return Integer.toString(0x4F);
                         }
                         if (Integer.parseInt(opcode[2]) < 255){
-                            byte word = (byte) 0x0E;
-                            byte value = (byte) Integer.parseInt(opcode[2]);
-                            IMemory.writeByte(word);
-                            IMemory.address += 1;
-                            IMemory.writeByte(value);
-                            IMemory.address += 1;
+                            MemoryZ80.writeByte(address,0x0E);
+                            address += 1;
+                            MemoryZ80.writeByte(address,Integer.parseInt(opcode[2]));
+                            address += 1;
                             return Integer.toString(0x0E);
                         }
                         break;
@@ -93,18 +90,16 @@ public class EnlazadorCargador {
             case "CP":
                 switch(opcode[1]){
                     case "C":
-                        byte word = (byte) 0xB9;
-                        System.out.println(word);
-                        IMemory.writeByte(word);
-                        IMemory.address += 1;
+                        MemoryZ80.writeByte(address,0xB9);
+                        address += 1;
                         return Integer.toString(0xB9);  
                 }
             case "JP":
                 switch(opcode[1]){
                     case "Z":
                         byte word = (byte) 0xCA;
-                        IMemory.writeByte(word);
-                        IMemory.address += 1;
+                        MemoryZ80.writeByte(address,word);
+                        address += 1;
                         return Integer.toString(0xCA);  
                     case "M":
                         return Integer.toString(0xFA);  
