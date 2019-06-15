@@ -10,24 +10,18 @@ import javax.swing.JPanel;
 import javax.swing.JFrame;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
 /**
  *
  * @author Sunny
  */
 public class RelocatorTable extends JFrame {
-     public RelocatorTable() {
-        super("Codigo");
+    
+    public void hexMemory(String[][] data){
         //array bidimensional de objetos con los datos de la tabla
-        Object[][] data = {
-            {"Mary", "Campione", "Esquiar", new Integer(5), new Boolean(false)},
-            {"Lhucas", "Huml", "Patinar", new Integer(3), new Boolean(true)},
-            {"Kathya", "Walrath", "Escalar", new Integer(2), new Boolean(false)},
-            {"Marcus", "Andrews", "Correr", new Integer(7), new Boolean(true)},
-            {"Angela", "Lalth", "Nadar", new Integer(4), new Boolean(false)}
-        };
         //array de String's con los títulos de las columnas
-        String[] columnNames = {"Memory", "Hex", "Etiqueta",
+        String[] columnNames = {"Memory", "Hex", "Etiquete",
         "Instruction"};
         //se crea la Tabla
         final JTable table = new JTable(data, columnNames);
@@ -41,11 +35,44 @@ public class RelocatorTable extends JFrame {
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
             }
-        });
+        });  
     }
+<<<<<<< HEAD
      
     public Object[][] AddData(){
          return null;
+=======
+>>>>>>> fe87d38ac59e3e9a382ca6ca7ea6ab4fd352a91c
         
+    public void hexFilled(String[][] data){
+        //array bidimensional de objetos con los datos de la tabla
+        //array de String's con los títulos de las columnas
+        String[] columnNames = {"Hex", "Hex", "Hex",
+        "Hex","Hex","Hex","Hex","Hex","Hex","Hex"};
+        //se crea la Tabla
+        final JTable table = new JTable(data, columnNames);
+        table.setPreferredScrollableViewportSize(new Dimension(500, 70));
+        //Creamos un JscrollPane y le agregamos la JTable
+        JScrollPane scrollPane = new JScrollPane(table);
+        //Agregamos el JScrollPane al contenedor
+        getContentPane().add(scrollPane, BorderLayout.CENTER);
+        //manejamos la salida
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
+            }
+        });  
     }
+        
+    
+    public ArrayList<String> AddData(String memory,String hex, String etiquete, String instruction){
+        ArrayList<String> line = new ArrayList<String>();  
+        line.add(memory);
+        line.add(hex);
+        line.add(etiquete);
+        line.add(instruction);
+        return line;
+    }
+    
+
 }

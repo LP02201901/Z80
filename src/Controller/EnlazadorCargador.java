@@ -6,7 +6,6 @@
 package Controller;
 
 import java.util.ArrayList;
-import View.RelocatorHexMemory;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import Model.MemoryOp;
@@ -23,13 +22,12 @@ public class EnlazadorCargador {
     private boolean flag = true;
     Hashtable<String, Integer> labels = new Hashtable<String, Integer>();
     public void readAssembler(ArrayList<String> lineaslist){
-        RelocatorHexMemory RHM = new RelocatorHexMemory();
+        //RelocatorHexMemory RHM = new RelocatorHexMemory();
         String codeLine;
         int y = 10;
+        ArrayList<ArrayList<String>> data = new ArrayList<ArrayList<String>>();
         
-        RelocatorTable frame = new RelocatorTable();
-        frame.pack();
-        frame.setVisible(true);
+        RelocatorTable RHM = new RelocatorTable();
         //RHM.setVisible(true);
         String opcode;
         for(int i=0;lineaslist.size() > i;i++){  
@@ -38,10 +36,15 @@ public class EnlazadorCargador {
             codeLine = codeLine.replaceAll(":", "");
             codeLine = codeLine.trim();
             opcode = relativeDirections(codeLine);
+            
             codeLine = opcode + " " + codeLine;
-            //RHM.addNewField(y, codeLine);
+            
+            data.add(RHM.AddData(codeLine,codeLine,codeLine,codeLine));
             y += 12;
         }
+        RHM.hexMemory(this.arrayListtoString(data));
+        RHM.pack();
+        RHM.setVisible(true);
         
         flag = false;
         MemoryZ80.resetMemory();   
@@ -54,13 +57,25 @@ public class EnlazadorCargador {
             codeLine = codeLine.trim();
             opcode = relativeDirections(codeLine);
             codeLine = opcode + " " + codeLine;
-            //RHM.addNewField(y, codeLine);
             y += 14;
         }
         
         for(int i=0;MemoryZ80.readMemory().length > i;i++){
             System.out.println(MemoryZ80.readByte(i));
         }      
+    }
+    
+    public String[][] arrayListtoString(ArrayList<ArrayList<String>> param){
+        String[][] data= new String[50][4];
+        String[] line = new String[4];
+        
+        for(int i=0;i < param.size();i++){  
+            for(int j=0;j < param.get(i).size();j++){
+               line[j]  = param.get(i).get(j);
+            }
+            data[i] = line;  
+        }
+        return data;
     }
     
     public String relativeDirections(String instruction){
