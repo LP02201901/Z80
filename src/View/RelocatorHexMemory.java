@@ -7,6 +7,7 @@ package View;
 
 import java.awt.Container;
 import javax.swing.JLabel;
+import Controller.RelocatorTable;
 
 /**
  *
@@ -36,11 +37,11 @@ public class RelocatorHexMemory extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 450, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 339, Short.MAX_VALUE)
         );
 
         pack();
@@ -76,7 +77,7 @@ public class RelocatorHexMemory extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RelocatorHexMemory().setVisible(true);
+                //new RelocatorHexMemory().setVisible(true);
             }
         });
     }

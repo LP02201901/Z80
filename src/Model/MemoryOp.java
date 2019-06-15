@@ -5,6 +5,8 @@
  */
 package Model;
 
+import java.util.Arrays;
+
 /**
  *
  * @author Sunny
@@ -15,11 +17,15 @@ public class MemoryOp implements IMemory
     public int address;
     
     public MemoryOp() {
-        z80Ram = new int[100000];
+        z80Ram = new int[100];
     }
     
     public int[] readMemory() {
          return z80Ram;
+    }
+    
+    public void resetMemory(){
+        Arrays.fill( z80Ram, 0 );
     }
 
     @Override
@@ -29,12 +35,12 @@ public class MemoryOp implements IMemory
 
     @Override
     public int readWord(int address) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return 0;
     }
 
     @Override
     public void writeByte(int address, int data) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        z80Ram[address] = data;
     }
 
     @Override
