@@ -25,7 +25,7 @@ public class RelocatorTable extends JFrame {
         "Instruction"};
         //se crea la Tabla
         final JTable table = new JTable(data, columnNames);
-        table.setPreferredScrollableViewportSize(new Dimension(500, 70));
+        table.setPreferredScrollableViewportSize(new Dimension(500, 400));
         //Creamos un JscrollPane y le agregamos la JTable
         JScrollPane scrollPane = new JScrollPane(table);
         //Agregamos el JScrollPane al contenedor
@@ -45,7 +45,7 @@ public class RelocatorTable extends JFrame {
         "Hex","Hex","Hex","Hex","Hex","Hex","Hex"};
         //se crea la Tabla
         final JTable table = new JTable(data, columnNames);
-        table.setPreferredScrollableViewportSize(new Dimension(500, 70));
+        table.setPreferredScrollableViewportSize(new Dimension(500, 700));
         //Creamos un JscrollPane y le agregamos la JTable
         JScrollPane scrollPane = new JScrollPane(table);
         //Agregamos el JScrollPane al contenedor
@@ -68,5 +68,9 @@ public class RelocatorTable extends JFrame {
         return line;
     }
     
-
+    public ArrayList<String> AddData(String memory){
+        ArrayList<String> line = new ArrayList<String>();  
+        line.add(memory);
+        return line;
+    }
 }
