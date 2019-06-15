@@ -63,7 +63,7 @@ public class Arquitectura extends javax.swing.JFrame {
         jPanel1.setOpaque(true);
         jPanel2.setOpaque(true);
         jPanel3.setOpaque(true);
-        Control(false, false, false, false, false, false, false, false, false, false,
+        Control(false, false, false, true, false, false, false, false, false, false,
             false, false, false, false, false, false, false, false,
             false, false, false, false, false, false, false, false, false,
              false, false, false, false, false, false, false, false, false);
