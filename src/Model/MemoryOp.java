@@ -17,7 +17,7 @@ public class MemoryOp implements IMemory
     public int address;
     
     public MemoryOp() {
-        z80Ram = new int[100];
+        z80Ram = new int[1000];
     }
     
     public int[] readMemory() {
