@@ -21,11 +21,11 @@ public class RelocatorTable extends JFrame {
     public void hexMemory(String[][] data){
         //array bidimensional de objetos con los datos de la tabla
         //array de String's con los títulos de las columnas
-        String[] columnNames = {"Memory", "Hex", "Etiquete",
+        String[] columnNames = {"Addr", "Opcode", "Label",
         "Instruction"};
         //se crea la Tabla
         final JTable table = new JTable(data, columnNames);
-        table.setPreferredScrollableViewportSize(new Dimension(500, 70));
+        table.setPreferredScrollableViewportSize(new Dimension(500, 400));
         //Creamos un JscrollPane y le agregamos la JTable
         JScrollPane scrollPane = new JScrollPane(table);
         //Agregamos el JScrollPane al contenedor
@@ -40,15 +40,15 @@ public class RelocatorTable extends JFrame {
      
     public Object[][] AddData(){
          return null;
-
+    }
     public void hexFilled(String[][] data){
         //array bidimensional de objetos con los datos de la tabla
         //array de String's con los títulos de las columnas
-        String[] columnNames = {"Hex", "Hex", "Hex",
-        "Hex","Hex","Hex","Hex","Hex","Hex","Hex"};
+        String[] columnNames = {"0", "1", "2",
+        "3","4","5","6","7","8","9","A","B","C","D","E","F"};
         //se crea la Tabla
         final JTable table = new JTable(data, columnNames);
-        table.setPreferredScrollableViewportSize(new Dimension(500, 70));
+        table.setPreferredScrollableViewportSize(new Dimension(700, 700));
         //Creamos un JscrollPane y le agregamos la JTable
         JScrollPane scrollPane = new JScrollPane(table);
         //Agregamos el JScrollPane al contenedor
@@ -71,5 +71,9 @@ public class RelocatorTable extends JFrame {
         return line;
     }
     
-
+    public ArrayList<String> AddData(String memory){
+        ArrayList<String> line = new ArrayList<String>();  
+        line.add(memory);
+        return line;
+    }
 }
