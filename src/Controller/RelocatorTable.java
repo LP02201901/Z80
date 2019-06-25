@@ -37,8 +37,10 @@ public class RelocatorTable extends JFrame {
             }
         });  
     }
-
-        
+     
+    public Object[][] AddData(){
+         return null;
+    }
     public void hexFilled(String[][] data){
         //array bidimensional de objetos con los datos de la tabla
         //array de String's con los títulos de las columnas

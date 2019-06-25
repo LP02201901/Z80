@@ -581,14 +581,10 @@ public class Intructions {
                     arq.show();
                     Thread.sleep(2000);
                     
-                }else{
-                    
-                    pc += 3;
-                    
-                }
-                
-                break;
-                
+                }else{                    
+                    pc += 3;                    
+                }                
+                break;                
             case 0x3E:                  //LD A, *
                 
                 pc++;
@@ -596,16 +592,30 @@ public class Intructions {
                 mpr[1] = br[0];
                 
                 break;
-                
+//////////////////////////////////////////////////////////////////////////////
             case 0x80:                  //ADD A, B
                 
                 mpr[0] += mpr[1];
+                
+                arq.B.setBackground(Color.red);
+                arq.B.setText(""+mpr[1]);
+                arq.show();
+                Thread.sleep(2000);
+                arq.B.setBackground(Color.white);
+                arq.A.setText(""+mpr[0]);
+                arq.A.setBackground(Color.red);
+                arq.show();
+                Thread.sleep(2000);
                 
                 break;
                 
             case 0x0D:                  //DEC C
                 
                 mpr[2]--;
+                arq.C.setBackground(Color.red);
+                arq.C.setText(""+mpr[2]);
+                arq.show();
+                Thread.sleep(2000);
                 
                 break;
                 
@@ -641,12 +651,30 @@ public class Intructions {
             case 0x81:                  //ADD A, C
                 
                 mpr[0] += mpr[2];
-                
+                arq.C.setBackground(Color.red);
+                arq.C.setText(""+mpr[2]);
+                arq.show();
+                Thread.sleep(2000);
+                arq.C.setBackground(Color.white);
+                arq.A.setText(""+mpr[0]);
+                arq.A.setBackground(Color.red);
+                arq.show();
+                Thread.sleep(2000);
                 break;
                 
             case 0x05:                  //DEC B
-                
+                arq.B.setBackground(Color.red);
+                arq.B.setText(""+mpr[1]);
+                arq.show();
+                Thread.sleep(2000);
                 mpr[1]--;
+                arq.B.setBackground(Color.red);
+                arq.B.setText(""+mpr[1]);
+                arq.show();
+                Thread.sleep(2000);
+                arq.B.setBackground(Color.white);
+                arq.show();
+                Thread.sleep(2000);
                 
                 break;
                 
@@ -657,12 +685,31 @@ public class Intructions {
                 br[1] = mem[pc + 1];
                 pc += br[0] + (0x100 * (br[1]));
                 
+                arq.Buffer1.setBackground(Color.red);
+                arq.Buffer2.setBackground(Color.red);
+                arq.Buffer1.setText("Valor: "+br[0]);
+                arq.Buffer2.setText("Valor: "+br[1]);
+                arq.show();
+                Thread.sleep(2000);
+                arq.Buffer1.setBackground(Color.white);
+                arq.Buffer2.setBackground(Color.white);
+                arq.PC.setBackground(Color.red);
+                arq.Buffer1.setText("Buffer 1");
+                arq.Buffer2.setText("Buffer 2");
+                arq.PC.setText(""+pc);
+                arq.show();
+                Thread.sleep(2000);
+                
                 break;
                 
             case 0x76:                  //HALT
                 
                 //Restaurar valores inciales de la interfaz
-                
+                arq.Control(false, false, false, false, false, false, false, false, false, false,
+            false, false, false, false, false, false, false, false,
+            false, false, false, false, false, false, false, false, false,
+             false, false, false, false, false, false, false, false, false, false, false);
+                arq.show();
                 break;
                 
         }
