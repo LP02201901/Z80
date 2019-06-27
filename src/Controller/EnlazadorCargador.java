@@ -116,7 +116,7 @@ public class EnlazadorCargador {
                 Logger.getLogger(EnlazadorCargador.class.getName()).log(Level.SEVERE, null, ex);
             }
             //Thread.sleep(1000);
-            
+            break;
             
                 
         }  

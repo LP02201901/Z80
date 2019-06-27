@@ -26,11 +26,13 @@ public class main {
         } catch (InterruptedException ex) {
             Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
         }*/
+        
+        /*
         Arquitectura A = new Arquitectura();
         A.show();
         Codigo C = new Codigo();
         C.show();
-
+*/
         View.Codigo homeView = new View.Codigo();
         homeView.ejem();
 
