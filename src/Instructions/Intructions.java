@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
  */
 public class Intructions {
 
-    public Intructions(int[] mem, int[] br, int ir, int[] mpr, int pc, int ALU, boolean[] flags) {
+    private Intructions(int[] mem, int[] br, int ir, int[] mpr, int pc, int ALU, boolean[] flags) {
         
         this.mem = mem;
         this.br = br;
@@ -38,7 +38,8 @@ public class Intructions {
         br[0] = 0;
         br[1] = 0;
         mpr= new int[20];
-        mem = new int[memoria];
+        mem = new int[1000];
+        //mem = memoria;
         
         for(int i=0; i<mem.length;i++){
             
@@ -268,7 +269,7 @@ public class Intructions {
                     
                 }else{
                     
-                    pc += 3;
+                    pc = 3;
                     
                 }
                 Thread.sleep(2000);
