@@ -227,6 +227,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
                 JOptionPane.showMessageDialog(arq, "Ejecutando");
+                
                 break;
 
             case 0x78:                  //LD A, B
@@ -274,6 +275,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
                 JOptionPane.showMessageDialog(arq, "Ejecutando");
+                
                 break;
 
             case 0xB9:                  //CP C
@@ -404,9 +406,9 @@ public class Intructions {
 
                     pc++;
                     br[0] = mem[pc];
-                    br[1] = mem[pc + 1];
-                    //pc = br[0] + (0x100 * (br[1]));
-                    pc=22;
+                    pc++;
+                    br[1] = mem[pc];
+                    pc = br[0] + (0x100 * (br[1])); //Pasar lo que esta en mem[pc] a hex                    
 
                     arq.Buffer1.setBackground(Color.BLUE);
                     arq.Buffer2.setBackground(Color.BLUE);
@@ -458,11 +460,13 @@ public class Intructions {
                 System.out.println("case 0xFA:");
 
                 if (arq.F8.getText().equals("1")) {
+                    
                     pc++;
                     br[0] = mem[pc];
-                    br[1] = mem[pc + 1];
-                    //pc = br[0] + (0x100 * (br[1]));
-                    pc=16;
+                    pc++;
+                    br[1] = mem[pc];
+                    pc = br[0] + (0x100 * (br[1])); //Pasar lo que esta en mem[pc] a hex
+                    
 
                     arq.Buffer1.setBackground(Color.BLUE);
                     arq.Buffer2.setBackground(Color.BLUE);
@@ -593,11 +597,9 @@ public class Intructions {
 
                 pc++;
                 br[0] = mem[pc];
-                br[1] = mem[pc + 1];
-                //pc = br[0] + (0x100 * (br[1]));
-                pc=0x03;
-                
-                
+                pc++;
+                br[1] = mem[pc];
+                pc = br[0] + (0x100 * (br[1])); //Pasar lo que esta en mem[pc] a hex
                 
                 arq.Buffer1.setBackground(Color.BLUE);
                 arq.Buffer2.setBackground(Color.BLUE);
@@ -763,9 +765,9 @@ public class Intructions {
 
                 pc++;
                 br[0] = mem[pc];
-                br[1] = mem[pc + 1];
-                //pc = br[0] + (0x100 * (br[1]));
-                pc=0x20;
+                pc++;
+                br[1] = mem[pc];
+                pc = br[0] + (0x100 * (br[1])); //Pasar lo que esta en mem[pc] a hex
                 mem[pc] = mpr[0];
 
                 System.out.println(mem[pc]);
@@ -1496,8 +1498,6 @@ public class Intructions {
 
     public void Ejecutar(int[] mem2) {
         
-        JOptionPane.showMessageDialog(arq, "Prueba");
-        Enter();
         mem = mem2;
         int fde = 0;
         System.out.println(mem[0]);
