@@ -17,12 +17,8 @@ public class main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Instructions.Intructions ins = new Instructions.Intructions(1000);
-        try {
-            ins.FDEprocess(0);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        View.Codigo homeView = new View.Codigo();
+        homeView.ejem();
     }
     
 }

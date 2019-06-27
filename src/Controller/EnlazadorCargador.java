@@ -12,6 +12,8 @@ import Model.MemoryOp;
 import java.util.Hashtable;
 import javax.swing.RowFilter.Entry;
 import java.lang.Math;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -100,6 +102,102 @@ public class EnlazadorCargador {
             System.out.println("0x"+Integer.toHexString(MemoryZ80.readByte(i))); 
                 
         }  
+        Instructions.Intructions ins = new Instructions.Intructions(MemoryZ80.readMemory());
+            try {
+                ins.FDEprocess(0);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        
+    }
+    
+        public void readAssemblerperLine(ArrayList<String> lineaslist, int linecode){
+        String codeLine;
+        String instruction;
+        int y = 10;
+        ArrayList<ArrayList<String>> data = new ArrayList<ArrayList<String>>();
+        ArrayList<String> opcodeLine = new ArrayList<String>();
+        
+        RelocatorTable RHM = new RelocatorTable();
+        RelocatorTable RHMLst = new RelocatorTable();
+        String opcode;
+        int n = 0;
+        String OpcodeData = "";
+        Integer aux = 0;
+        ArrayList<String> relative_direction = new ArrayList<String>();
+       for(int i=0;lineaslist.size() > i;i++){     
+            instruction = lineaslist.get(i);
+            codeLine = lineaslist.get(i);
+            codeLine = codeLine.replaceAll(",", "");          
+            codeLine = codeLine.replaceAll(":", ""); 
+            codeLine = codeLine.trim();
+            
+            relative_direction = relativeDirections(codeLine, i);
+            for(int j = 0; j < relative_direction.size(); j++){              
+                opcode = relative_direction.get(j);
+                opcodeLine.add(opcode);
+                OpcodeData += opcode+" ";                                                                       
+                n++;
+            }     
+            relative_direction = new ArrayList<String>();
+            data.add(RHM.AddData(memoryLoadaddressHex(Integer.toHexString(aux)),OpcodeData,codeLine,instruction));
+            OpcodeData = "";
+            aux = n;
+        }
+       
+        flag = false;
+        MemoryZ80.resetMemory();  
+        //labels.forEach((k,v) -> System.out.println("Key " + k + " Value " + v[0]));
+        //labels.forEach((k,v) -> System.out.println("Key " + k + " Value " + v[1]));     
+        
+        n = 0;
+        address = 0x0;
+        relative_direction = new ArrayList<String>();
+        OpcodeData = "";
+        opcodeLine = new ArrayList<String>();
+        data = new ArrayList<ArrayList<String>>();
+        
+        for(int i=0;lineaslist.size() > i;i++){     
+            instruction = lineaslist.get(i);
+            codeLine = lineaslist.get(i);
+            codeLine = codeLine.replaceAll(",", "");          
+            codeLine = codeLine.replaceAll(":", ""); 
+            codeLine = codeLine.trim();
+            
+            relative_direction = relativeDirections(codeLine, i);
+            for(int j = 0; j < relative_direction.size(); j++){              
+                opcode = relative_direction.get(j);
+                opcodeLine.add(opcode);
+                OpcodeData += opcode+" ";                                                                       
+                n++;
+            }    
+            
+            relative_direction = new ArrayList<String>();
+            data.add(RHM.AddData(memoryLoadaddressHex(Integer.toHexString(aux)),OpcodeData,codeLine,instruction));
+            OpcodeData = "";
+            aux = n;
+        }    
+        
+        if (linecode == 1){          
+            RHMLst.hexMemory(this.arrayListtoString(data));
+            RHMLst.pack();
+            RHMLst.setVisible(true);
+            RHM.hexFilled(this.arrayListtoOpcodeString(opcodeLine));
+            RHM.pack();
+            RHM.setVisible(true);
+        }else{            
+            RHMLst.hexMemory(this.arrayListtoString(data), linecode);
+            RHM.hexFilled(this.arrayListtoOpcodeString(opcodeLine), linecode);
+        }
+        
+       
+        Instructions.Intructions ins = new Instructions.Intructions(MemoryZ80.readMemory());
+            try {
+                ins.FDEprocess(0);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        
     }
     
     public String[][] arrayListtoString(ArrayList<ArrayList<String>> param){
