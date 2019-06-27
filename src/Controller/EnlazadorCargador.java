@@ -91,15 +91,15 @@ public class EnlazadorCargador {
             aux = n;
         }          
         
-        RHMLst.hexMemory(this.arrayListtoString(data));
+        /*RHMLst.hexMemory(this.arrayListtoString(data));
         RHMLst.pack();
         RHMLst.setVisible(true);
         RHM.hexFilled(this.arrayListtoOpcodeString(opcodeLine));
         RHM.pack();
-        RHM.setVisible(true);
+        RHM.setVisible(true);*/
        
-        Instructions.Intructions ins;
-        ins = new Instructions.Intructions(1000);
+        //Instructions.Intructions ins;
+        //ins = new Instructions.Intructions(1000);
         
         /*
         try {
@@ -110,24 +110,24 @@ public class EnlazadorCargador {
         */
         for(int i=0;MemoryZ80.readMemory().length > i;i++){
             System.out.println("0x"+Integer.toHexString(MemoryZ80.readByte(i))); 
-            try {
+            /*try {
                 ins.FDEprocess(0, "0x"+Integer.toHexString(MemoryZ80.readByte(i)));
             } catch (InterruptedException ex) {
                 Logger.getLogger(EnlazadorCargador.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            }*/
             //Thread.sleep(1000);
             break;
             
                 
         }  
 
-        /*Instructions.Intructions ins = new Instructions.Intructions();
+        Instructions.Intructions ins = new Instructions.Intructions(MemoryZ80.readMemory());
             try {
                 ins.FDEprocess(0,"0x6");
             } catch (InterruptedException ex) {
                 Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
             }
-        */
+        
     }
     
         public void readAssemblerperLine(ArrayList<String> lineaslist, int linecode){

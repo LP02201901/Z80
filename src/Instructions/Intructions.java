@@ -31,15 +31,19 @@ public class Intructions {
         
     }
     
-    public Intructions(int memoria) {
+    public Intructions(int[] memoria) {
         
         pc = 0;
         br = new int[2];
         br[0] = 0;
         br[1] = 0;
         mpr= new int[20];
-        mem = new int[1000];
-        //mem = memoria;
+        //mem = new int[1000];
+        mem = memoria;
+        System.out.println(mem[3]);
+        for(int i = 0; i < mem.length;i++){
+            System.out.println(mem[i]);
+        }
         
         for(int i=0; i<mem.length;i++){
             
