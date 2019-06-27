@@ -67,7 +67,7 @@
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="MAIN:&#xa; LD B, 125&#xa; LD C, 57&#xa;bucle:&#xa; LD A, B&#xa; CP C&#xa; JP Z, fin&#xa; JP M, menor&#xa; SUB C&#xa; LD B, A&#xa; JP bucle&#xa;menor:&#xa; LD A, C&#xa; SUB B&#xa; LD C, A&#xa; JP bucle&#xa;fin:&#xa; LD (2000H), A&#xa;HALT"/>
+            <Property name="text" type="java.lang.String" value="MAIN:&#xa; LD B, 125&#xa; LD C, 57&#xa;bucle:&#xa; LD A, B&#xa; CP C&#xa; JP Z, fin&#xa; JP M, menor&#xa; SUB C&#xa; LD B, A&#xa; JP bucle&#xa;menor:&#xa; LD A, C&#xa; SUB B&#xa; LD C, A&#xa; JP bucle&#xa;fin:&#xa; LD (0102H), A&#xa;HALT"/>
           </Properties>
         </Component>
       </SubComponents>

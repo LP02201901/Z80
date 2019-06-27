@@ -400,15 +400,14 @@ public class Intructions {
 
             case 0xCA:                  //JP Z, **
                 System.out.println("case 0xCA:");
-
+                
                 //if(arq.F7.getText().equals("1")){
                 if (arq.F7.getText().equals("1")) {
 
                     pc++;
                     br[0] = mem[pc];
-                    pc++;
-                    br[1] = mem[pc];
-                    pc = br[0] + (0x100 * (br[1])); //Pasar lo que esta en mem[pc] a hex                    
+                    br[1] = mem[pc + 1];
+                    pc = br[0] + (0x100 * (br[1]))-1;
 
                     arq.Buffer1.setBackground(Color.BLUE);
                     arq.Buffer2.setBackground(Color.BLUE);
@@ -463,9 +462,8 @@ public class Intructions {
                     
                     pc++;
                     br[0] = mem[pc];
-                    pc++;
-                    br[1] = mem[pc];
-                    pc = br[0] + (0x100 * (br[1])); //Pasar lo que esta en mem[pc] a hex
+                    br[1] = mem[pc + 1];
+                    pc = br[0] + (0x100 * (br[1])) - 1;
                     
 
                     arq.Buffer1.setBackground(Color.BLUE);
@@ -599,7 +597,7 @@ public class Intructions {
                 br[0] = mem[pc];
                 pc++;
                 br[1] = mem[pc];
-                pc = br[0] + (0x100 * (br[1])); //Pasar lo que esta en mem[pc] a hex
+                pc = br[0] + (0x100 * (br[1])) - 1; //Pasar lo que esta en mem[pc] a hex
                 
                 arq.Buffer1.setBackground(Color.BLUE);
                 arq.Buffer2.setBackground(Color.BLUE);
@@ -765,10 +763,11 @@ public class Intructions {
 
                 pc++;
                 br[0] = mem[pc];
-                pc++;
-                br[1] = mem[pc];
-                pc = br[0] + (0x100 * (br[1])); //Pasar lo que esta en mem[pc] a hex
-                mem[pc] = mpr[0];
+                br[1] = mem[pc + 1];
+                
+                System.out.println("br0: "+br[0]+" br1: "+br[1]+" pc: "+pc);
+                int pcAux = br[0] + (0x100 * (br[1])) - 1; //Pasar lo que esta en mem[pc] a hex
+                mem[pcAux] = mpr[0];
 
                 System.out.println(mem[pc]);
 
@@ -1507,11 +1506,9 @@ public class Intructions {
         System.out.println(mem[0]);
         fde = FDEprocess(0);
         System.out.println(fde);
-
+        
         while (mem[fde] != 0x76) {
             fde = FDEprocess(fde);
-            //System.out.println(fde);                
-
         }
         JOptionPane.showMessageDialog(arq, "Registro A: " + mpr[0]);
 
