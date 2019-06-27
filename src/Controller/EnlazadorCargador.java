@@ -24,7 +24,7 @@ public class EnlazadorCargador {
     public int address = 0x0;
     private boolean flag = true;
     Hashtable<String, String[]> labels = new Hashtable<String, String[]>();
-    public void readAssembler(ArrayList<String> lineaslist) throws InterruptedException{
+    public void readAssembler(ArrayList<String> lineaslist) {
         String codeLine;
         String instruction;
         int y = 10;
@@ -91,12 +91,12 @@ public class EnlazadorCargador {
             aux = n;
         }          
         
-        /*RHMLst.hexMemory(this.arrayListtoString(data));
+        RHMLst.hexMemory(this.arrayListtoString(data));
         RHMLst.pack();
         RHMLst.setVisible(true);
         RHM.hexFilled(this.arrayListtoOpcodeString(opcodeLine));
         RHM.pack();
-        RHM.setVisible(true);*/
+        RHM.setVisible(true);
        
         //Instructions.Intructions ins;
         //ins = new Instructions.Intructions(1000);
@@ -376,9 +376,9 @@ public class EnlazadorCargador {
                         address += 1;
                         opcodeData.add("0xCA");
                         if(labels.get(opcode[2]) != null){                          
-                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[1]));
-                            address += 1; 
                             MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[0]));
+                            address += 1; 
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[1]));
                             address += 1; 
                             opcodeData.add(labels.get(opcode[2])[1]);   
                             opcodeData.add(labels.get(opcode[2])[0]);                                 
@@ -398,9 +398,9 @@ public class EnlazadorCargador {
                         opcodeData.add("0xFA");
                         address += 1;
                         if(labels.get(opcode[2]) != null){                          
-                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[1]));
-                            address += 1; 
                             MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[0]));
+                            address += 1; 
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[1]));
                             address += 1;  
                             opcodeData.add(labels.get(opcode[2])[1]);   
                             opcodeData.add(labels.get(opcode[2])[0]);                              
@@ -418,9 +418,9 @@ public class EnlazadorCargador {
                         address += 1;                      
                         opcodeData.add("0xC3"); 
                         if(labels.get(opcode[1]) != null){                  
-                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[1])[1]));
-                            address += 1; 
                             MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[1])[0]));
+                            address += 1; 
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[1])[1]));
                             address += 1;  
                             opcodeData.add(labels.get(opcode[1])[1]);   
                             opcodeData.add(labels.get(opcode[1])[0]);                       
@@ -439,9 +439,9 @@ public class EnlazadorCargador {
                         opcodeData.add("0xF2");
                         address += 1;
                         if(labels.get(opcode[2]) != null){                          
-                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[1]));
-                            address += 1; 
                             MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[0]));
+                            address += 1; 
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[1]));
                             address += 1;  
                             opcodeData.add(labels.get(opcode[2])[1]);   
                             opcodeData.add(labels.get(opcode[2])[0]);                              
@@ -464,9 +464,9 @@ public class EnlazadorCargador {
                         address += 1;
                         opcodeData.add("0x28");
                         if(labels.get(opcode[2]) != null){                          
-                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[1]));
-                            address += 1; 
                             MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[0]));
+                            address += 1; 
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[1]));
                             address += 1; 
                             opcodeData.add(labels.get(opcode[2])[1]);   
                             opcodeData.add(labels.get(opcode[2])[0]);                                 
@@ -486,9 +486,9 @@ public class EnlazadorCargador {
                         opcodeData.add("0x20");
                         address += 1;
                         if(labels.get(opcode[2]) != null){                          
-                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[1]));
-                            address += 1; 
                             MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[0]));
+                            address += 1; 
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[1]));
                             address += 1;  
                             opcodeData.add(labels.get(opcode[2])[1]);   
                             opcodeData.add(labels.get(opcode[2])[0]);                              
@@ -506,9 +506,9 @@ public class EnlazadorCargador {
                         address += 1;                      
                         opcodeData.add("0x18"); 
                         if(labels.get(opcode[1]) != null){                  
-                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[1])[1]));
-                            address += 1; 
                             MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[1])[0]));
+                            address += 1; 
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[1])[1]));
                             address += 1;  
                             opcodeData.add(labels.get(opcode[1])[1]);   
                             opcodeData.add(labels.get(opcode[1])[0]);                       
