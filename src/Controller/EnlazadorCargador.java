@@ -116,17 +116,21 @@ public class EnlazadorCargador {
                 Logger.getLogger(EnlazadorCargador.class.getName()).log(Level.SEVERE, null, ex);
             }*/
             //Thread.sleep(1000);
+            //System.out.println(MemoryZ80.read); 
+            int[] aux2;
+            aux2= new int[1000];
+            aux2 = MemoryZ80.readMemory();
+            
+            System.out.println(aux2[0]);
             break;
             
                 
         }  
+        
 
         Instructions.Intructions ins = new Instructions.Intructions(MemoryZ80.readMemory());
-            try {
-                ins.FDEprocess(0,"0x6");
-            } catch (InterruptedException ex) {
-                Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        ins.Ejecutar(MemoryZ80.readMemory());
+            
         
     }
     
