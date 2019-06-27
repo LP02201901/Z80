@@ -1495,6 +1495,10 @@ public class Intructions {
             e.printStackTrace();
         }
     }
+    
+    public static int convert(int n) {
+        return Integer.valueOf(String.valueOf(n), 16);
+      }
 
     public void Ejecutar(int[] mem2) {
         
