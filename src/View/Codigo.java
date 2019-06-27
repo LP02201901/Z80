@@ -8,6 +8,8 @@ package View;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import Controller.EnlazadorCargador;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -40,6 +42,7 @@ public class Codigo extends javax.swing.JFrame {
 
         txtCodigo.setColumns(20);
         txtCodigo.setRows(5);
+        txtCodigo.setText("MAIN:\n LD B, 125\n LD C, 57\nbucle:\n LD A, B\n CP C\n JP Z, fin\n JP M, menor\n SUB C\n LD B, A\n JP bucle\nmenor:\n LD A, C\n SUB B\n LD C, A\n JP bucle\nfin:\n LD (0102H), A\nHALT");
         jScrollPane1.setViewportView(txtCodigo);
 
         btnEjecutar.setText("Ejecutar");
@@ -96,7 +99,11 @@ public class Codigo extends javax.swing.JFrame {
         }
         
         EnlazadorCargador EC = new EnlazadorCargador();
-        EC.readAssembler(lineasList);
+        try {
+            EC.readAssembler(lineasList);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Codigo.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
     }//GEN-LAST:event_btnEjecutarActionPerformed
 

@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+    </Property>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="M1" min="-2" max="-2" attributes="0"/>
+                  <Component id="MREQ" min="-2" max="-2" attributes="0"/>
+                  <Component id="IORQ" min="-2" max="-2" attributes="0"/>
+                  <Component id="RD" min="-2" max="-2" attributes="0"/>
+                  <Component id="WR" min="-2" max="-2" attributes="0"/>
+                  <Component id="RFSH" min="-2" max="-2" attributes="0"/>
+                  <Component id="HALT" min="-2" max="-2" attributes="0"/>
+                  <Component id="WAIT" min="-2" max="-2" attributes="0"/>
+                  <Component id="INT" min="-2" max="-2" attributes="0"/>
+                  <Component id="MMI" min="-2" max="-2" attributes="0"/>
+                  <Component id="RESET" min="-2" max="-2" attributes="0"/>
+                  <Component id="BUSRQ" min="-2" max="-2" attributes="0"/>
+                  <Component id="GND" min="-2" max="-2" attributes="0"/>
+                  <Component id="BUSACK" min="-2" max="-2" attributes="0"/>
+                  <Component id="V5" min="-2" max="-2" attributes="0"/>
+                  <Component id="CLK" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="A0" min="-2" max="-2" attributes="0"/>
+                  <Component id="A1" min="-2" max="-2" attributes="0"/>
+                  <Component id="A2" min="-2" max="-2" attributes="0"/>
+                  <Component id="A3" min="-2" max="-2" attributes="0"/>
+                  <Component id="A4" min="-2" max="-2" attributes="0"/>
+                  <Component id="A5" min="-2" max="-2" attributes="0"/>
+                  <Component id="A6" min="-2" max="-2" attributes="0"/>
+                  <Component id="A7" min="-2" max="-2" attributes="0"/>
+                  <Component id="A8" min="-2" max="-2" attributes="0"/>
+                  <Component id="A9" min="-2" max="-2" attributes="0"/>
+                  <Component id="A10" min="-2" max="-2" attributes="0"/>
+                  <Component id="A11" min="-2" max="-2" attributes="0"/>
+                  <Component id="A12" min="-2" max="-2" attributes="0"/>
+                  <Component id="A13" min="-2" max="-2" attributes="0"/>
+                  <Component id="A14" min="-2" max="-2" attributes="0"/>
+                  <Component id="A15" min="-2" max="-2" attributes="0"/>
+                  <Component id="D0" min="-2" max="-2" attributes="0"/>
+                  <Component id="D1" min="-2" max="-2" attributes="0"/>
+                  <Component id="D2" min="-2" max="-2" attributes="0"/>
+                  <Component id="D3" min="-2" max="-2" attributes="0"/>
+                  <Component id="D4" min="-2" max="-2" attributes="0"/>
+                  <Component id="D5" min="-2" max="-2" attributes="0"/>
+                  <Component id="D6" min="-2" max="-2" attributes="0"/>
+                  <Component id="D7" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="189" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="A0" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="A1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="A2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="A3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="A4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="A5" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="A6" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="A7" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="A8" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="A9" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="A10" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="A11" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="A12" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="A13" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="A14" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="A15" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="D0" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="D1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="D2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="D3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="D4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="D5" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="D6" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="D7" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="M1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="MREQ" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="IORQ" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="RD" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="WR" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="RFSH" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="HALT" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="WAIT" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="INT" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="MMI" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="RESET" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="BUSRQ" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="BUSACK" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <Component id="CLK" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="V5" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="GND" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="50" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="66" red="66" type="rgb"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="105" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="256" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Z80"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="A0">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="A1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="A2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="A3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="A4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A4"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="A5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A5"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="A6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A6"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="A7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A7"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="A8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A8"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="A9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A9"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="A10">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A10"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="A11">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A11"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="A12">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A12"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="A13">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A13"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="A14">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A14"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="A15">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A15"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="D0">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="D0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="D1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="D1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="D2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="D2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="D3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="D3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="D4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="D4"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="D5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="D5"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="D6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="D6"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="D7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="D7"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="M1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="M1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="MREQ">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="MREQ"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="IORQ">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="IORQ"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="RD">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="RD"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="WR">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="WR"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="RFSH">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="RFSH"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="HALT">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="HALT"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="WAIT">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="WAIT"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="INT">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="INT"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="MMI">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="MMI"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="RESET">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="RESET"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="BUSRQ">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="BUSRQ"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="GND">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="GND"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="BUSACK">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="BUSACK"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="V5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="+5V"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="CLK">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="CLK"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>

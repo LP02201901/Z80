@@ -6,6 +6,7 @@
 package Instructions;
 
 import View.Arquitectura;
+import View.Pastilla;
 import java.awt.Color;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -52,9 +53,11 @@ public class Intructions {
         
         mem[0]=0x32;
         arq = new Arquitectura();
+        pas = new Pastilla();
     }
     
     Arquitectura arq;
+    Pastilla pas;
     public int mem[];
     int br[];
     int ir;
@@ -63,13 +66,14 @@ public class Intructions {
     int ALU;
     boolean flags[];
     
-    public void FDEprocess(int pos) throws InterruptedException{
+    public void FDEprocess(int pos, String ir2) throws InterruptedException{
         
-        ir =  mem[pos];
+        //ir =  mem[pos];
         
-        switch(ir){
+        
+        switch(ir2){
             
-            case 0x06:                  //LD B, *
+            case "0x6":                  //LD B, *
                 
                 pc++;
                 br[0] = mem[pc];
@@ -101,10 +105,16 @@ public class Intructions {
                         arq.B.setBackground(Color.red);
                         arq.B.setText("" + mpr[1]);
                         arq.show();
-                    
+                    Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
+                        
                 break;
                 
-            case 0x0E:                  //LD C, *
+            case "0x0E":                  //LD C, *
                 
                 pc++;
                 br[0] = mem[pc];
@@ -139,10 +149,16 @@ public class Intructions {
                         arq.C.setBackground(Color.BLUE);
                         arq.C.setText("" + mpr[1]);
                         arq.show();
-                        
+                      
+                        Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;
                 
-            case 0x78:                  //LD A, B
+            case "0x78":                  //LD A, B
                 
                 mpr[0] = mpr[1];
                 
@@ -158,9 +174,15 @@ public class Intructions {
                 arq.B.setBackground(Color.white);
                 arq.show();
                 
+                Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;
                 
-            case 0xB9:                  //CP C
+            case "0xB9":                  //CP C
                 
                 arq.ALU.setBackground(Color.ORANGE);
                 arq.show();
@@ -215,10 +237,15 @@ public class Intructions {
                     Thread.sleep(2000);
                     
                 }
-                
+                Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;
                 
-            case 0xCA:                  //JP Z, **
+            case "0xCA":                  //JP Z, **
                 
                 if(arq.F7.getText().equals("1")){
                     
@@ -244,10 +271,15 @@ public class Intructions {
                     pc += 3;
                     
                 }
-                
+                Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;
                 
-            case 0xFA:                  //JP M, **
+            case "0xFA":                  //JP M, **
                 
                 if(arq.F8.getText().equals("1")){
                     
@@ -273,10 +305,15 @@ public class Intructions {
                     pc += 3;
                     
                 }
-                
+                Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;
                 
-            case 0x91:                  //SUB C
+            case "0x91":                  //SUB C
                 
                 mpr[0] -= mpr[2];
                 
@@ -287,10 +324,15 @@ public class Intructions {
                 Thread.sleep(2000);
                 
                 arq.ALU.setBackground(Color.WHITE);
-                
+                Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;
                 
-            case 0x47:                  //LD B, A
+            case "0x47":                  //LD B, A
                 
                 mpr[1] = mpr[0];
                 
@@ -304,10 +346,15 @@ public class Intructions {
                 Thread.sleep(2000);
                 
                 arq.A.setBackground(Color.WHITE);
-                
+                Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;
             
-            case 0xC3:                  //JP **
+            case "0xC3":                  //JP **
                 
                 pc++;
                 br[0] = mem[pc];
@@ -328,10 +375,15 @@ public class Intructions {
                 arq.PC.setBackground(Color.BLUE);
                 arq.PC.setText("" + pc);
                 arq.show();
-
+Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;
                 
-            case 0x79:                  //LD A, C
+            case "0x79":                  //LD A, C
                 
                 mpr[0] = mpr[2];
                 
@@ -345,10 +397,15 @@ public class Intructions {
                 Thread.sleep(2000);
                 
                 arq.C.setBackground(Color.WHITE);
-                
+               Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show(); 
                 break;
                 
-            case 0x90:                  //SUB B
+            case "0x90":                  //SUB B
                 
                 mpr[0] -= mpr[1];
                 
@@ -359,10 +416,15 @@ public class Intructions {
                 Thread.sleep(2000);
                 
                 arq.ALU.setBackground(Color.WHITE);
-                
+               Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show(); 
                 break;
                 
-            case 0x4F:                  //LD C, A
+            case "0x4F":                  //LD C, A
                 
                 mpr[2] = mpr[0];
                 
@@ -376,10 +438,15 @@ public class Intructions {
                 Thread.sleep(2000);
                 
                 arq.A.setBackground(Color.WHITE);
-                
+                Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;
                 
-            case 0x32:                  //LD (**), A
+            case "0x32":                  //LD (**), A
                 
                 pc++;
                 br[0] = mem[pc];
@@ -402,19 +469,33 @@ public class Intructions {
                 arq.Buffer2.setText("Buffer");
                 arq.show();
                 
+                pas.A0.setBackground(Color.red);
+                pas.show();
+                
+                Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;
                 
-            case 0x3A:                  //LD A, (**)
+            case "0x3A":                  //LD A, (**)
                 
                 pc++;
                 br[0] = mem[pc];
                 br[1] = mem[pc + 1];
                 pc = br[0] + (0x100 * (br[1]));
                 mpr[0] = mem[pc];
-                
+                Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;
                 
-            case 0xFE:                  //CP *
+            case "0xFE":                  //CP *
                 
                 pc++;
                 
@@ -470,10 +551,15 @@ public class Intructions {
                     Thread.sleep(2000);
                     
                 }
-                
+                Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;
                 
-            case 0x28:                  //JR Z, *
+            case "0x28":                  //JR Z, *
                 
                 if(arq.F7.getText().equals("1")){
                     
@@ -499,10 +585,15 @@ public class Intructions {
                     pc += 3;
                     
                 }
-                
+                Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;   
                 
-            case 0xB8:                  //CP B
+            case "0xB8":                  //CP B
                 
                 arq.ALU.setBackground(Color.ORANGE);
                 arq.show();
@@ -557,10 +648,15 @@ public class Intructions {
                     Thread.sleep(2000);
                     
                 }
-                
+                Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;
                 
-            case 0xF2:                  //JP P, **
+            case "0xF2":                  //JP P, **
                 
                 if(arq.F3.getText().equals("1")){
                     
@@ -583,17 +679,29 @@ public class Intructions {
                     
                 }else{                    
                     pc += 3;                    
-                }                
+                }  
+                Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;                
-            case 0x3E:                  //LD A, *
+            case "0x3E":                  //LD A, *
                 
                 pc++;
                 br[0] = mem[pc];
                 mpr[1] = br[0];
                 
+                Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;
 //////////////////////////////////////////////////////////////////////////////
-            case 0x80:                  //ADD A, B
+            case "0x80":                  //ADD A, B
                 
                 mpr[0] += mpr[1];
                 
@@ -606,20 +714,30 @@ public class Intructions {
                 arq.A.setBackground(Color.red);
                 arq.show();
                 Thread.sleep(2000);
-                
+                Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;
                 
-            case 0x0D:                  //DEC C
+            case "0x0D":                  //DEC C
                 
                 mpr[2]--;
                 arq.C.setBackground(Color.red);
                 arq.C.setText(""+mpr[2]);
                 arq.show();
                 Thread.sleep(2000);
-                
+                Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;
                 
-            case 0x20:                  //JR NZ, *
+            case "0x20":                  //JR NZ, *
                 
                 if(arq.F7.getText().equals("0")){
                     
@@ -645,10 +763,15 @@ public class Intructions {
                     pc += 3;
                     
                 }
-                
+                Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;
                 
-            case 0x81:                  //ADD A, C
+            case "0x81":                  //ADD A, C
                 
                 mpr[0] += mpr[2];
                 arq.C.setBackground(Color.red);
@@ -660,9 +783,14 @@ public class Intructions {
                 arq.A.setBackground(Color.red);
                 arq.show();
                 Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;
                 
-            case 0x05:                  //DEC B
+            case "0x05":                  //DEC B
                 arq.B.setBackground(Color.red);
                 arq.B.setText(""+mpr[1]);
                 arq.show();
@@ -675,10 +803,14 @@ public class Intructions {
                 arq.B.setBackground(Color.white);
                 arq.show();
                 Thread.sleep(2000);
-                
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 break;
                 
-            case 0x18:                  //JR *
+            case "0x18":                  //JR *
                 
                 pc++;
                 br[0] = mem[pc];
@@ -699,10 +831,15 @@ public class Intructions {
                 arq.PC.setText(""+pc);
                 arq.show();
                 Thread.sleep(2000);
+                        arq.Control(false, false, false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false,
+                        false, false, false, false, false, false, false, false, false,
+                         false, false, false, false, false, false, false, false, false, false, false);
+                        arq.show();
                 
                 break;
                 
-            case 0x76:                  //HALT
+            case "0x76":                  //HALT
                 
                 //Restaurar valores inciales de la interfaz
                 arq.Control(false, false, false, false, false, false, false, false, false, false,
@@ -719,7 +856,7 @@ public class Intructions {
         //Recursión tomando como punto de partida pc
         if(ir != 0x76){
             
-            FDEprocess(pc);
+            //FDEprocess(pc);
             
         }
                 

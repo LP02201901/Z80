@@ -12,6 +12,8 @@ import Model.MemoryOp;
 import java.util.Hashtable;
 import javax.swing.RowFilter.Entry;
 import java.lang.Math;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -22,7 +24,7 @@ public class EnlazadorCargador {
     public int address = 0x0;
     private boolean flag = true;
     Hashtable<String, String[]> labels = new Hashtable<String, String[]>();
-    public void readAssembler(ArrayList<String> lineaslist){
+    public void readAssembler(ArrayList<String> lineaslist) throws InterruptedException{
         String codeLine;
         String instruction;
         int y = 10;
@@ -96,10 +98,28 @@ public class EnlazadorCargador {
         RHM.pack();
         RHM.setVisible(true);
        
+        Instructions.Intructions ins = new Instructions.Intructions(1000);
+        
+        /*
+        try {
+                ins.FDEprocess(0, "0x6");
+            } catch (InterruptedException ex) {
+                Logger.getLogger(EnlazadorCargador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        */
         for(int i=0;MemoryZ80.readMemory().length > i;i++){
             System.out.println("0x"+Integer.toHexString(MemoryZ80.readByte(i))); 
+            try {
+                ins.FDEprocess(0, "0x"+Integer.toHexString(MemoryZ80.readByte(i)));
+            } catch (InterruptedException ex) {
+                Logger.getLogger(EnlazadorCargador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            //Thread.sleep(1000);
+            
+            
                 
         }  
+        
     }
     
     public String[][] arrayListtoString(ArrayList<ArrayList<String>> param){
