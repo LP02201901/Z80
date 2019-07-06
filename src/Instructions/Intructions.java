@@ -98,7 +98,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false, false, false);
 
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -113,7 +113,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false, true, false);
                 arq.Buffer1.setText("Valor: " + mem[pc]);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
 
                  {
                     try {
@@ -128,7 +128,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.Buffer1.setText("Buffer");
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -139,7 +139,7 @@ public class Intructions {
                 arq.B.setBackground(Color.red);
                 arq.B.setText("" + mpr[1]);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -152,7 +152,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
 
                 break;
 
@@ -171,7 +171,7 @@ public class Intructions {
                 // Cambiar esos valores de false, por los valores de los registros como 
                 // lo hacemos abajo para que no se vea ese reguero de falses
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -186,7 +186,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false, true, false);
                 arq.Buffer1.setText("Valor: " + mem[pc]);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
 
                  {
                     try {
@@ -201,7 +201,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.Buffer1.setText("Buffer");
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -212,7 +212,7 @@ public class Intructions {
                 arq.C.setBackground(Color.BLUE);
                 arq.C.setText("" + mpr[2]);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
 
                  {
                     try {
@@ -226,7 +226,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 
                 break;
 
@@ -237,7 +237,7 @@ public class Intructions {
 
                 arq.B.setBackground(Color.ORANGE);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -249,7 +249,7 @@ public class Intructions {
                 arq.A.setText("" + mpr[0]);
                 arq.A.setBackground(Color.BLUE);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -260,7 +260,7 @@ public class Intructions {
 
                 arq.B.setBackground(Color.white);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
 
                  {
                     try {
@@ -274,7 +274,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 
                 break;
 
@@ -283,7 +283,7 @@ public class Intructions {
 
                 arq.ALU.setBackground(Color.ORANGE);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -299,7 +299,7 @@ public class Intructions {
                     arq.F7.setBackground(Color.BLUE);
                     arq.F7.setText("1");
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -313,7 +313,7 @@ public class Intructions {
                     arq.F7.setBackground(Color.BLUE);
                     arq.F7.setText("0");
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -329,7 +329,7 @@ public class Intructions {
                     arq.F8.setBackground(Color.BLUE);
                     arq.F8.setText("1");
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -343,7 +343,7 @@ public class Intructions {
                     arq.F8.setBackground(Color.BLUE);
                     arq.F8.setText("0");
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -359,7 +359,7 @@ public class Intructions {
                     arq.F3.setBackground(Color.BLUE);
                     arq.F3.setText("1");
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -373,7 +373,7 @@ public class Intructions {
                     arq.F3.setBackground(Color.BLUE);
                     arq.F3.setText("0");
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -395,7 +395,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
             case 0xCA:                  //JP Z, **
@@ -414,7 +414,7 @@ public class Intructions {
                     arq.Buffer1.setText("Valor: " + br[0]);
                     arq.Buffer2.setText("Valor: " + br[1]);
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -426,7 +426,7 @@ public class Intructions {
                     arq.PC.setBackground(Color.BLUE);
                     arq.PC.setText("" + pc);
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -452,7 +452,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
             case 0xFA:                  //JP M, **
@@ -471,7 +471,7 @@ public class Intructions {
                     arq.Buffer1.setText("Valor: " + br[0]);
                     arq.Buffer2.setText("Valor: " + br[1]);
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -483,7 +483,7 @@ public class Intructions {
                     arq.PC.setBackground(Color.BLUE);
                     arq.PC.setText("" + pc);
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -509,7 +509,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
             case 0x91:                  //SUB C
@@ -521,7 +521,7 @@ public class Intructions {
                 arq.A.setBackground(Color.BLUE);
                 arq.A.setText("" + mpr[0]);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -543,7 +543,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
             case 0x47:                  //LD B, A
@@ -553,7 +553,7 @@ public class Intructions {
 
                 arq.A.setBackground(Color.ORANGE);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -565,7 +565,7 @@ public class Intructions {
                 arq.B.setBackground(Color.BLUE);
                 arq.B.setText("" + mpr[1]);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -587,7 +587,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
             case 0xC3:                  //JP **
@@ -604,7 +604,7 @@ public class Intructions {
                 arq.Buffer1.setText("Valor: " + br[0]);
                 arq.Buffer2.setText("Valor: " + br[1]);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -620,7 +620,7 @@ public class Intructions {
                 arq.PC.setBackground(Color.BLUE);
                 arq.PC.setText("" + pc);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -633,7 +633,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
             case 0x79:                  //LD A, C
@@ -643,7 +643,7 @@ public class Intructions {
 
                 arq.C.setBackground(Color.ORANGE);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -655,7 +655,7 @@ public class Intructions {
                 arq.A.setBackground(Color.BLUE);
                 arq.A.setText("" + mpr[0]);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -677,7 +677,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
             case 0x90:                  //SUB B
@@ -689,7 +689,7 @@ public class Intructions {
                 arq.A.setBackground(Color.BLUE);
                 arq.A.setText("" + mpr[0]);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -711,7 +711,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
             case 0x4F:                  //LD C, A
@@ -721,7 +721,7 @@ public class Intructions {
 
                 arq.A.setBackground(Color.ORANGE);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -733,7 +733,7 @@ public class Intructions {
                 arq.C.setBackground(Color.BLUE);
                 arq.C.setText("" + mpr[2]);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -755,7 +755,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
             case 0x32:                  //LD (**), A
@@ -778,7 +778,7 @@ public class Intructions {
                 arq.PC.setBackground(Color.BLUE);
                 arq.PC.setText("" + pc);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -792,7 +792,7 @@ public class Intructions {
                 arq.Buffer1.setText("Buffer");
                 arq.Buffer2.setText("Buffer");
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
 
                 //pas.A0.setBackground(Color.red);
                 //pas.show();
@@ -808,7 +808,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
             case 0x3A:                  //LD A, (**)
@@ -831,7 +831,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
             case 0xFE:                  //CP *
@@ -841,7 +841,7 @@ public class Intructions {
 
                 arq.ALU.setBackground(Color.ORANGE);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -856,7 +856,7 @@ public class Intructions {
                     arq.F7.setBackground(Color.BLUE);
                     arq.F7.setText("1");
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -870,7 +870,7 @@ public class Intructions {
                     arq.F7.setBackground(Color.BLUE);
                     arq.F7.setText("0");
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -886,7 +886,7 @@ public class Intructions {
                     arq.F8.setBackground(Color.BLUE);
                     arq.F8.setText("1");
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -900,7 +900,7 @@ public class Intructions {
                     arq.F8.setBackground(Color.BLUE);
                     arq.F8.setText("0");
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -916,7 +916,7 @@ public class Intructions {
                     arq.F3.setBackground(Color.BLUE);
                     arq.F3.setText("1");
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -930,7 +930,7 @@ public class Intructions {
                     arq.F3.setBackground(Color.BLUE);
                     arq.F3.setText("0");
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -952,7 +952,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
             case 0x28:                  //JR Z, *
@@ -970,7 +970,7 @@ public class Intructions {
                     arq.Buffer1.setText("Valor: " + br[0]);
                     arq.Buffer2.setText("Valor: " + br[1]);
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -982,7 +982,7 @@ public class Intructions {
                     arq.PC.setBackground(Color.BLUE);
                     arq.PC.setText("" + pc);
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -1008,7 +1008,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
             case 0xB8:                  //CP B
@@ -1016,7 +1016,7 @@ public class Intructions {
 
                 arq.ALU.setBackground(Color.ORANGE);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -1032,7 +1032,7 @@ public class Intructions {
                     arq.F7.setBackground(Color.BLUE);
                     arq.F7.setText("1");
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -1046,7 +1046,7 @@ public class Intructions {
                     arq.F7.setBackground(Color.BLUE);
                     arq.F7.setText("0");
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -1062,7 +1062,7 @@ public class Intructions {
                     arq.F8.setBackground(Color.BLUE);
                     arq.F8.setText("1");
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -1076,7 +1076,7 @@ public class Intructions {
                     arq.F8.setBackground(Color.BLUE);
                     arq.F8.setText("0");
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -1092,7 +1092,7 @@ public class Intructions {
                     arq.F3.setBackground(Color.BLUE);
                     arq.F3.setText("1");
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -1106,7 +1106,7 @@ public class Intructions {
                     arq.F3.setBackground(Color.BLUE);
                     arq.F3.setText("0");
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -1128,7 +1128,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
             case 0xF2:                  //JP P, **
@@ -1146,7 +1146,7 @@ public class Intructions {
                     arq.Buffer1.setText("Valor: " + br[0]);
                     arq.Buffer2.setText("Valor: " + br[1]);
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -1158,7 +1158,7 @@ public class Intructions {
                     arq.PC.setBackground(Color.BLUE);
                     arq.PC.setText("" + pc);
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -1182,7 +1182,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
             case 0x3E:                  //LD A, *
                 System.out.println("case 0x3E:");
@@ -1203,7 +1203,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 //////////////////////////////////////////////////////////////////////////////
             case 0x80:                  //ADD A, B
@@ -1214,7 +1214,7 @@ public class Intructions {
                 arq.B.setBackground(Color.red);
                 arq.B.setText("" + mpr[1]);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -1226,7 +1226,7 @@ public class Intructions {
                 arq.A.setText("" + mpr[0]);
                 arq.A.setBackground(Color.red);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -1246,7 +1246,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
             case 0x0D:                  //DEC C
@@ -1256,7 +1256,7 @@ public class Intructions {
                 arq.C.setBackground(Color.red);
                 arq.C.setText("" + mpr[2]);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -1276,7 +1276,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
             case 0x20:                  //JR NZ, *
@@ -1294,7 +1294,7 @@ public class Intructions {
                     arq.Buffer1.setText("Valor: " + br[0]);
                     arq.Buffer2.setText("Valor: " + br[1]);
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -1306,7 +1306,7 @@ public class Intructions {
                     arq.PC.setBackground(Color.BLUE);
                     arq.PC.setText("" + pc);
                     arq.show();
-                    JOptionPane.showMessageDialog(arq, "Ejecutando");
+                    JOptionPane.showMessageDialog(null, "Ejecutando");
                     {
                         try {
                             Thread.sleep(1);
@@ -1332,7 +1332,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
             case 0x81:                  //ADD A, C
@@ -1342,7 +1342,7 @@ public class Intructions {
                 arq.C.setBackground(Color.red);
                 arq.C.setText("" + mpr[2]);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -1354,7 +1354,7 @@ public class Intructions {
                 arq.A.setText("" + mpr[0]);
                 arq.A.setBackground(Color.red);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -1367,7 +1367,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
             case 0x05:                  //DEC B
@@ -1375,7 +1375,7 @@ public class Intructions {
                 arq.B.setBackground(Color.red);
                 arq.B.setText("" + mpr[1]);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -1387,7 +1387,7 @@ public class Intructions {
                 arq.B.setBackground(Color.red);
                 arq.B.setText("" + mpr[1]);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -1397,7 +1397,7 @@ public class Intructions {
                 }
                 arq.B.setBackground(Color.white);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -1410,7 +1410,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
             case 0x18:                  //JR *
@@ -1426,7 +1426,7 @@ public class Intructions {
                 arq.Buffer1.setText("Valor: " + br[0]);
                 arq.Buffer2.setText("Valor: " + br[1]);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -1441,7 +1441,7 @@ public class Intructions {
                 arq.Buffer2.setText("Buffer 2");
                 arq.PC.setText("" + pc);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                  {
                     try {
                         Thread.sleep(1);
@@ -1454,7 +1454,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
 
                 break;
 
@@ -1467,7 +1467,7 @@ public class Intructions {
                         false, false, false, false, false, false, false, false, false,
                         false, false, false, false, false, false, false, false, false, false, false);
                 arq.show();
-                JOptionPane.showMessageDialog(arq, "Ejecutando");
+                JOptionPane.showMessageDialog(null, "Ejecutando");
                 break;
 
         }
@@ -1510,7 +1510,7 @@ public class Intructions {
         while (mem[fde] != 0x76) {
             fde = FDEprocess(fde);
         }
-        JOptionPane.showMessageDialog(arq, "Registro A: " + mpr[0]);
+        JOptionPane.showMessageDialog(null, "Registro A: " + mpr[0]);
 
         //System.out.println(mem[201]);
         System.out.println("Memoria Despues");
