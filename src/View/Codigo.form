@@ -31,9 +31,9 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Component id="btnEjecutar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
+              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
               <Component id="jButton1" min="-2" pref="73" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
           </Group>
@@ -67,7 +67,7 @@
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="MAIN:&#xa; LD B, 125&#xa; LD C, 57&#xa;bucle:&#xa; LD A, B&#xa; CP C&#xa; JP Z, fin&#xa; JP M, menor&#xa; SUB C&#xa; LD B, A&#xa; JP bucle&#xa;menor:&#xa; LD A, C&#xa; SUB B&#xa; LD C, A&#xa; JP bucle&#xa;fin:&#xa; LD (2000H), A&#xa;HALT"/>
+            <Property name="text" type="java.lang.String" value="MAIN:&#xa; LD B, 125&#xa; LD C, 57&#xa;bucle:&#xa; LD A, B&#xa; CP C&#xa; JP Z, fin&#xa; JP M, menor&#xa; SUB C&#xa; LD B, A&#xa; JP bucle&#xa;menor:&#xa; LD A, C&#xa; SUB B&#xa; LD C, A&#xa; JP bucle&#xa;fin:&#xa; LD (0102H), A&#xa;HALT"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -90,7 +90,8 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Ejecuci&#xf3;n paso a paso"/>
+        <Property name="text" type="java.lang.String" value="C&#xf3;digo"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>

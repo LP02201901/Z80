@@ -44,7 +44,7 @@ public class Codigo extends javax.swing.JFrame {
 
         txtCodigo.setColumns(20);
         txtCodigo.setRows(5);
-        txtCodigo.setText("MAIN:\n LD B, 125\n LD C, 57\nbucle:\n LD A, B\n CP C\n JP Z, fin\n JP M, menor\n SUB C\n LD B, A\n JP bucle\nmenor:\n LD A, C\n SUB B\n LD C, A\n JP bucle\nfin:\n LD (2000H), A\nHALT");
+        txtCodigo.setText("MAIN:\n LD B, 125\n LD C, 57\nbucle:\n LD A, B\n CP C\n JP Z, fin\n JP M, menor\n SUB C\n LD B, A\n JP bucle\nmenor:\n LD A, C\n SUB B\n LD C, A\n JP bucle\nfin:\n LD (0102H), A\nHALT");
         jScrollPane1.setViewportView(txtCodigo);
 
         btnEjecutar.setText("Ejecutar");
@@ -61,7 +61,8 @@ public class Codigo extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Ejecución paso a paso");
+        jButton2.setText("Código");
+        jButton2.setEnabled(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -79,9 +80,9 @@ public class Codigo extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(btnEjecutar)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(74, 74, 74)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41))
         );
