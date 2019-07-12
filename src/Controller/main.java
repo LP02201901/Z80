@@ -7,6 +7,8 @@ package Controller;
 
 import View.Arquitectura;
 import View.Codigo;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -15,27 +17,30 @@ import java.util.logging.Logger;
  * @author Andrey
  */
 public class main {
-    /**
-     * @param args the command line arguments
-     */
+
+    static String RutaOrigen = "C:\\Users\\Andrey\\Desktop\\Z80\\src\\Assets\\Codigo.z80";
+
     public static void main(String[] args) {
 
-        /*Instructions.Intructions ins = new Instructions.Intructions(1000);
+        //View.Codigo homeView = new View.Codigo();
+        //homeView.ejem();
         try {
-            ins.FDEprocess(0);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
-        
-        /*
-        Arquitectura A = new Arquitectura();
-        A.show();
-        Codigo C = new Codigo();
-        C.show();
-*/
-        View.Codigo homeView = new View.Codigo();
-        homeView.ejem();
+            BufferedReader buffer = new BufferedReader(new FileReader(RutaOrigen));
+            AnalizadorLexico analizadorJFlex = new AnalizadorLexico(buffer);
+
+            while (true) {
+                TokenPersonalizado token = analizadorJFlex.yylex();
+
+                if (!analizadorJFlex.existenTokens()) {
+                    break;
+                }
+
+                System.out.println(token.toString());
+            }
+        } catch (Exception e) {
+            System.out.println(e.toString());
+        }
 
     }
-    
+
 }
