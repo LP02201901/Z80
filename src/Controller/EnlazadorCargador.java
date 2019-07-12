@@ -60,9 +60,7 @@ public class EnlazadorCargador {
         }
        
         flag = false;
-        MemoryZ80.resetMemory();  
-        //labels.forEach((k,v) -> System.out.println("Key " + k + " Value " + v[0]));
-        //labels.forEach((k,v) -> System.out.println("Key " + k + " Value " + v[1]));     
+        MemoryZ80.resetMemory();     
         
         n = 0;
         address = 0x0;
@@ -99,40 +97,18 @@ public class EnlazadorCargador {
         RHM.pack();
         RHM.setVisible(true);
        
-        //Instructions.Intructions ins;
-        //ins = new Instructions.Intructions(1000);
-        
-        /*
-        try {
-                ins.FDEprocess(0, "0x6");
-            } catch (InterruptedException ex) {
-                Logger.getLogger(EnlazadorCargador.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        */
-        for(int i=0;MemoryZ80.readMemory().length > i;i++){
-            System.out.println("0x"+Integer.toHexString(MemoryZ80.readByte(i))); 
-            /*try {
-                ins.FDEprocess(0, "0x"+Integer.toHexString(MemoryZ80.readByte(i)));
-            } catch (InterruptedException ex) {
-                Logger.getLogger(EnlazadorCargador.class.getName()).log(Level.SEVERE, null, ex);
-            }*/
-            //Thread.sleep(1000);
-            //System.out.println(MemoryZ80.read); 
+        for(int i=0;MemoryZ80.readMemory().length > i;i++){; 
             int[] aux2;
             aux2= new int[1000];
             aux2 = MemoryZ80.readMemory();
-            
-            System.out.println(aux2[0]);
             break;
             
                 
-        }  
-        
+        }         
 
         Instructions.Intructions ins = new Instructions.Intructions(MemoryZ80.readMemory());
         ins.Ejecutar(MemoryZ80.readMemory());
-            
-        
+                   
     }
     
         public void readAssemblerperLine(ArrayList<String> lineaslist, int linecode){
@@ -149,7 +125,7 @@ public class EnlazadorCargador {
         String OpcodeData = "";
         Integer aux = 0;
         ArrayList<String> relative_direction = new ArrayList<String>();
-       for(int i=0;lineaslist.size() > i;i++){     
+        for(int i=0;lineaslist.size() > i;i++){     
             instruction = lineaslist.get(i);
             codeLine = lineaslist.get(i);
             codeLine = codeLine.replaceAll(",", "");          
@@ -168,11 +144,12 @@ public class EnlazadorCargador {
             OpcodeData = "";
             aux = n;
         }
+        for(int hh = 0; hh <= MemoryZ80.readMemory().length; hh++){
+            System.out.print(MemoryZ80.readMemory()[hh]);
+        }  
        
         flag = false;
-        MemoryZ80.resetMemory();  
-        //labels.forEach((k,v) -> System.out.println("Key " + k + " Value " + v[0]));
-        //labels.forEach((k,v) -> System.out.println("Key " + k + " Value " + v[1]));     
+        MemoryZ80.resetMemory();      
         
         n = 0;
         address = 0x0;
@@ -200,8 +177,8 @@ public class EnlazadorCargador {
             data.add(RHM.AddData(memoryLoadaddressHex(Integer.toHexString(aux)),OpcodeData,codeLine,instruction));
             OpcodeData = "";
             aux = n;
-        }    
-        
+        }   
+                    
         if (linecode == 1){          
             RHMLst.hexMemory(this.arrayListtoString(data));
             RHMLst.pack();
@@ -213,16 +190,7 @@ public class EnlazadorCargador {
             RHMLst.hexMemory(this.arrayListtoString(data), linecode);
             RHM.hexFilled(this.arrayListtoOpcodeString(opcodeLine), linecode);
         }
-        
-       /*
-        Instructions.Intructions ins = new Instructions.Intructions(MemoryZ80.readMemory());
-            try {
-                ins.FDEprocess(0, "0x6");
-            } catch (InterruptedException ex) {
-                Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
-            }
-*/
-        
+                  
     }
     
     public String[][] arrayListtoString(ArrayList<ArrayList<String>> param){
@@ -268,33 +236,33 @@ public class EnlazadorCargador {
         ArrayList<String> opcodeData =  new ArrayList<String>(); 
         switch(opcode[0]){
             case "LD":
-                HexGen.loadLD(opcode,MemoryZ80,address,opcodeData);
+                loadLD(opcode,MemoryZ80,address,opcodeData);
                 break;    
             case "CP":
-                HexGen.loadCP(opcode,MemoryZ80,address,opcodeData);             
+                loadCP(opcode,MemoryZ80,address,opcodeData);             
                 break; 
             case "JP":
-                HexGen.loadJP(opcode,MemoryZ80,address,opcodeData,labels); 
+                loadJP(opcode,MemoryZ80,address,opcodeData,labels); 
                              
             break;         
             case "JR": 
-                HexGen.loadJR(opcode,MemoryZ80,address,opcodeData,labels);               
+                loadJR(opcode,MemoryZ80,address,opcodeData,labels);               
                               
             break;
             case "SUB":
-                HexGen.loadSUB(opcode,MemoryZ80,address,opcodeData);       
+                loadSUB(opcode,MemoryZ80,address,opcodeData);       
             break;
             case "ADD":  
-                HexGen.loadADD(opcode,MemoryZ80,address,opcodeData); 
+                loadADD(opcode,MemoryZ80,address,opcodeData); 
             break;
             case "HALT":
-                HexGen.loadHALT(opcode,MemoryZ80,address,opcodeData);                
+                loadHALT(opcode,MemoryZ80,address,opcodeData);                
                 break;
             case "DEC":
-                HexGen.loadDEC(opcode,MemoryZ80,address,opcodeData);                
+                loadDEC(opcode,MemoryZ80,address,opcodeData);                
             break;
             default:
-                HexGen.loadDEFAULT(opcode,MemoryZ80,address,opcodeData,flag,memoryDirections,labels);               
+                loadDEFAULT(opcode,MemoryZ80,address,opcodeData,flag,memoryDirections,labels);               
         }
         return opcodeData;
     }
@@ -318,6 +286,371 @@ public class EnlazadorCargador {
            return "0" + firstno;
        }
        return ""; 
+    }
+    
+        public static void loadLD(String[] opcode,MemoryOp MemoryZ80,int address,ArrayList opcodeData){
+        
+        switch(opcode[1]){
+            case "A":
+                switch(opcode[2]){
+                    case "B":                   
+                    MemoryZ80.writeByte(address,0x78);
+                    address += 1;
+                    opcodeData.add("0x78");                 
+                    break; 
+                    case "C":
+                    MemoryZ80.writeByte(address,0x79);
+                    address += 1;
+                    opcodeData.add("0x79");                                             
+                    break;
+                    case "D":
+                    MemoryZ80.writeByte(address,0x78);
+                    address += 1;
+                    opcodeData.add("0x7A");                 
+                    break;  
+                    case "E":
+                    MemoryZ80.writeByte(address,0x78);
+                    address += 1;
+                    opcodeData.add("0x7B");                 
+                    break;  
+                    case "H":
+                    MemoryZ80.writeByte(address,0x78);
+                    address += 1;
+                    opcodeData.add("0x7C");                 
+                    break;
+                    case "L":
+                    MemoryZ80.writeByte(address,0x78);
+                    address += 1;
+                    opcodeData.add("0x7D");                 
+                    break;   
+                    default:  
+                        
+                    MemoryZ80.writeByte(address,0x3E);
+                    address += 1;      
+                    opcodeData.add("0x3E");
+                    MemoryZ80.writeByte(address,Integer.parseInt(opcode[2]));
+                    address += 1;
+                    opcodeData.add("0x"+Integer.toHexString(Integer.parseInt(opcode[2])));                                            
+                    break;                         
+                }
+            break;   
+            case "B":
+                switch(opcode[2]){
+                    case "A":                          
+                    MemoryZ80.writeByte(address,0x47);
+                    address += 1;      
+                    opcodeData.add("0x47");
+                    break; 
+                    default:
+                    MemoryZ80.writeByte(address,0x06);
+                    address += 1;      
+                    opcodeData.add("0x06");
+                    MemoryZ80.writeByte(address,Integer.parseInt(opcode[2]));
+                    address += 1;
+                    opcodeData.add("0x"+Integer.toHexString(Integer.parseInt(opcode[2])));                                            
+                    break;
+                }
+                break;
+                   
+            case "C":
+                
+                switch(opcode[2]){
+                    case "A":
+                    MemoryZ80.writeByte(address,0x4F);
+                    address += 1;
+                    opcodeData.add("0x4F");                                            
+                    break;
+                    default:                       
+                    MemoryZ80.writeByte(address,0x0E);
+                    address += 1;
+                    opcodeData.add("0x0E");
+                    MemoryZ80.writeByte(address,Integer.parseInt(opcode[2]));
+                    address += 1;
+                    opcodeData.add("0x"+Integer.toHexString(Integer.parseInt(opcode[2])));
+                    break;
+                        
+                }  
+            break;
+                
+            default:
+                if (opcode[1].contains("(")){
+                    MemoryZ80.writeByte(address,0x32);
+                    address += 1;
+                    String memoryValue=opcode[1].replace("(", "");
+                    memoryValue=memoryValue.replace(")", "");
+                    memoryValue=memoryValue.replace("H", "");
+                    String[] memoryValueList = memoryValue.split("");
+                    MemoryZ80.writeByte(address,Integer.parseInt(memoryValueList[2]+memoryValueList[3]));
+                    address += 1;
+                    MemoryZ80.writeByte(address,Integer.parseInt(memoryValueList[0]+memoryValueList[1]));
+                    address += 1;                            
+                    opcodeData.add("0x32");                           
+                    opcodeData.add(""+ memoryValueList[2]+memoryValueList[3]);                            
+                    opcodeData.add(""+ memoryValueList[0]+memoryValueList[1]); 
+                    }
+                    break;
+            }                           
+    }
+    
+    
+    public static void loadCP(String[] opcode,MemoryOp MemoryZ80,int address,ArrayList opcodeData){
+        switch(opcode[1]){
+            case "B":
+                MemoryZ80.writeByte(address,0xB9);
+                address += 1;
+                opcodeData.add("0xB8"); 
+                break; 
+            case "C":
+                MemoryZ80.writeByte(address,0xB9);
+                address += 1;
+                opcodeData.add("0xB9"); 
+                break;                     
+            default:                       
+                if (Integer.parseInt(opcode[1]) < 255){                           
+                MemoryZ80.writeByte(address,0xFE);
+                address += 1;
+                opcodeData.add("0xFE");
+                MemoryZ80.writeByte(address,Integer.parseInt(opcode[1]));
+                address += 1;
+                opcodeData.add("0x"+Integer.toHexString(Integer.parseInt(opcode[1])));                                            
+                break; 
+            }
+            break; 
+                        
+       }
+    }
+        
+    public static void loadJP(String[] opcode,MemoryOp MemoryZ80,int address,ArrayList opcodeData,Hashtable<String, String[]> labels){
+                switch(opcode[1]){
+                    case "Z":
+                        MemoryZ80.writeByte(address,0xCA);
+                        address += 1;
+                        opcodeData.add("0xCA");
+                        if(labels.get(opcode[2]) != null){                          
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[0]));
+                            address += 1; 
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[1]));
+                            address += 1; 
+                            opcodeData.add(labels.get(opcode[2])[1]);   
+                            opcodeData.add(labels.get(opcode[2])[0]);                                 
+                            
+                        }else{                          
+                            MemoryZ80.writeByte(address,0);
+                            address += 1;
+                            MemoryZ80.writeByte(address,0);
+                            address += 1;  
+                            opcodeData.add("0");
+                            opcodeData.add("0");  
+                        }                
+                    break;        
+                        
+                    case "M":
+                        MemoryZ80.writeByte(address,0xFA);
+                        opcodeData.add("0xFA");
+                        address += 1;
+                        if(labels.get(opcode[2]) != null){                          
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[0]));
+                            address += 1; 
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[1]));
+                            address += 1;  
+                            opcodeData.add(labels.get(opcode[2])[1]);   
+                            opcodeData.add(labels.get(opcode[2])[0]);                              
+                        }else{                          
+                            MemoryZ80.writeByte(address,0);
+                            address += 1;           
+                            MemoryZ80.writeByte(address,0);
+                            address += 1;
+                            opcodeData.add("0");
+                            opcodeData.add("0");   
+                        }                        
+                        break;
+                    default:
+                        MemoryZ80.writeByte(address,0xC3);
+                        address += 1;                      
+                        opcodeData.add("0xC3"); 
+                        if(labels.get(opcode[1]) != null){                  
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[1])[0]));
+                            address += 1; 
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[1])[1]));
+                            address += 1;  
+                            opcodeData.add(labels.get(opcode[1])[1]);   
+                            opcodeData.add(labels.get(opcode[1])[0]);                       
+                        }else{                          
+                            MemoryZ80.writeByte(address,0);
+                            address += 1;            
+                            MemoryZ80.writeByte(address,0);
+                            address += 1;  
+                            opcodeData.add("0"); 
+                            opcodeData.add("0"); 
+                        }                       
+                        break;
+                        
+                    case "P": 
+                        MemoryZ80.writeByte(address,0xF2);
+                        opcodeData.add("0xF2");
+                        address += 1;
+                        if(labels.get(opcode[2]) != null){                          
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[0]));
+                            address += 1; 
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[1]));
+                            address += 1;  
+                            opcodeData.add(labels.get(opcode[2])[1]);   
+                            opcodeData.add(labels.get(opcode[2])[0]);                              
+                        }else{                          
+                            MemoryZ80.writeByte(address,0);
+                            address += 1;           
+                            MemoryZ80.writeByte(address,0);
+                            address += 1;
+                            opcodeData.add("0");
+                            opcodeData.add("0");   
+                        }            
+                        break;
+                        
+                }  
+    }
+    public static void loadJR(String[] opcode,MemoryOp MemoryZ80,int address,ArrayList opcodeData,Hashtable<String, String[]> labels){
+                switch(opcode[1]){
+                    case "Z":
+                        MemoryZ80.writeByte(address,0x28);
+                        address += 1;
+                        opcodeData.add("0x28");
+                        if(labels.get(opcode[2]) != null){                          
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[0]));
+                            address += 1; 
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[1]));
+                            address += 1; 
+                            opcodeData.add(labels.get(opcode[2])[1]);   
+                            opcodeData.add(labels.get(opcode[2])[0]);                                 
+                            
+                        }else{                          
+                            MemoryZ80.writeByte(address,0);
+                            address += 1;
+                            MemoryZ80.writeByte(address,0);
+                            address += 1;  
+                            opcodeData.add("0");
+                            opcodeData.add("0");  
+                        }                
+                    break;        
+                        
+                    case "NZ":
+                        MemoryZ80.writeByte(address,0x20);
+                        opcodeData.add("0x20");
+                        address += 1;
+                        if(labels.get(opcode[2]) != null){                          
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[0]));
+                            address += 1; 
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[2])[1]));
+                            address += 1;  
+                            opcodeData.add(labels.get(opcode[2])[1]);   
+                            opcodeData.add(labels.get(opcode[2])[0]);                              
+                        }else{                          
+                            MemoryZ80.writeByte(address,0);
+                            address += 1;           
+                            MemoryZ80.writeByte(address,0);
+                            address += 1;
+                            opcodeData.add("0");
+                            opcodeData.add("0");   
+                        }                        
+                        break;
+                    default:
+                        MemoryZ80.writeByte(address,0x18);
+                        address += 1;                      
+                        opcodeData.add("0x18"); 
+                        if(labels.get(opcode[1]) != null){                  
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[1])[0]));
+                            address += 1; 
+                            MemoryZ80.writeByte(address,Integer.valueOf(labels.get(opcode[1])[1]));
+                            address += 1;  
+                            opcodeData.add(labels.get(opcode[1])[1]);   
+                            opcodeData.add(labels.get(opcode[1])[0]);                       
+                        }else{                          
+                            MemoryZ80.writeByte(address,0);
+                            address += 1;            
+                            MemoryZ80.writeByte(address,0);
+                            address += 1;  
+                            opcodeData.add("0"); 
+                            opcodeData.add("0"); 
+                        }                       
+                        break;
+                        
+                } 
+    }
+    
+    public static void loadSUB(String[] opcode,MemoryOp MemoryZ80,int address,ArrayList opcodeData){
+        switch(opcode[1]){
+            case "C":
+                MemoryZ80.writeByte(address,0x91);
+                address += 1;
+                opcodeData.add("0x91");                        
+                break;
+            case "B":
+                MemoryZ80.writeByte(address,0x90);
+                address += 1;   
+                opcodeData.add("0x90");                       
+                break;
+        }   
+    } 
+    public static void loadADD(String[] opcode,MemoryOp MemoryZ80,int address,ArrayList opcodeData){        
+        switch(opcode[1]){
+            case "A": 
+                switch(opcode[2]){
+                    case "B":                               
+                    MemoryZ80.writeByte(address,0x80);
+                    address += 1;
+                    opcodeData.add("0x80");                 
+                    break;
+                    case "C":  
+                    MemoryZ80.writeByte(address,0x81);
+                    address += 1;
+                    opcodeData.add("0x81");                                             
+                    break;
+                    default:
+                    MemoryZ80.writeByte(address,0x3E);
+                    address += 1;      
+                    opcodeData.add("0x3E");
+                    MemoryZ80.writeByte(address,Integer.parseInt(opcode[2]));
+                    address += 1;
+                    opcodeData.add("0x"+Integer.toHexString(Integer.parseInt(opcode[2])));                                            
+                    break;                              
+                }                                       
+            break;        
+        }
+    }
+    
+    public static void loadHALT(String[] opcode,MemoryOp MemoryZ80,int address,ArrayList opcodeData){   
+        MemoryZ80.writeByte(address,0x76);
+        address += 1;  
+        opcodeData.add("0x76");  
+    }
+    
+    public static void loadDEC(String[] opcode,MemoryOp MemoryZ80,int address,ArrayList opcodeData){        
+        switch(opcode[1]){
+            case "C":
+                MemoryZ80.writeByte(address,0x0D);
+                address += 1;
+                opcodeData.add("0x0D");                        
+                break;
+            case "B":
+                MemoryZ80.writeByte(address,0x05);
+                address += 1;   
+                opcodeData.add("0x05");                       
+                break;
+        }  
+    } 
+    public static void loadDEFAULT(String[] opcode,MemoryOp MemoryZ80,int address
+            ,ArrayList opcodeData,boolean flag,String[] memoryDirections,
+            Hashtable<String, String[]>  labels){   
+        if(flag){
+            if (opcode[0].equals("MAIN")){
+                memoryDirections[0] = Integer.toHexString(0)+'0';
+                memoryDirections[1] = Integer.toHexString(0)+'0';
+                labels.put(opcode[0], memoryDirections);  
+                }else{
+                memoryDirections[1] = Integer.toString(0)+'0';
+                memoryDirections[0] = Integer.toString(address);
+                labels.put(opcode[0], memoryDirections);       
+            } 
+        } 
     }
     
 }

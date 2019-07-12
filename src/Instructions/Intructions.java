@@ -48,10 +48,6 @@ public class Intructions {
         for (int i = 0; i < memoria.length; i++) {
             mem[i] = memoria[i];
         }
-        //System.out.println(mem[3]);
-        //for(int i = 0; i < mem.length;i++){
-        // System.out.println(mem[i]);
-        //}
 
         for (int i = 0; i < mem.length; i++) {
 
