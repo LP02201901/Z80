@@ -1,0 +1,157 @@
+ALGORITMO pruebas(a, b, c):
+{
+	/* comentario simple */
+        /* multilinea
+		comentando	*/
+
+	#Probando condicional IF
+	a = 1;
+	si (a>2) entonces{
+		imprimirPantalla("hola");
+	} 
+	si_no si a==1{
+		imprimirPantalla(a);
+	}
+	si_no {
+		imprimirPantalla(5);
+	}
+
+	#########################
+	#Probando el iterador WHILE
+	a=10;
+	mientras a>2{
+		a=a-1;
+		imprimirPantalla(a);
+	}
+
+	#################
+	#Probando el iterador DO WHILE
+	a=0;
+	hacer{
+		a=a+1;
+		imprimirPantalla(a);
+	}mientras a<10
+
+	#################
+	#Probando el condicional SWITCH 
+	a=1;
+	seleccionar a {
+		caso 1: imprimirPantalla(1);
+		caso 2: imprimirPantalla(2);
+		defecto: imprimirPantalla("Defecto");
+	}
+
+	#################
+	#Probando el iterador FOR
+	para a=-8; a<=10; a=a+1 {
+		imprimirPantalla(a);
+	}
+
+	#################
+	#Probando imprimir expresiones
+	imprimirPantalla (verdadero && falso);
+	imprimirPantalla (!falso || !verdadero);
+	imprimirPantalla (2>=5);
+	imprimirPantalla (5==(2+2*2-1));
+
+	#################
+	#Probando asignaciones
+	a = "Hola";
+	b = "Mundo";
+	imprimirPantalla (a + " " + b);
+
+	#################
+	#Probando ejecución de funciones predefinidas
+	imprimirPantalla (sen(2));
+	pi=3.1415926;
+	imprimirPantalla (csc(cos(sen(tan(sec(pi))))));
+	a = 2.3e15+2i+2+i;
+	imprimirPantalla (2.2+2i+a);
+
+	#################
+	#Probando vectores y matrices
+	b = {2,3,4,5};
+	imprimirPantalla (b+b);
+	c = {9,10,12,20};
+	imprimirPantalla (c-b);
+	imprimirPantalla (b+b+b);
+	c = {{2,1,5},{2,2,9},{3,4,-1}};
+	imprimirPantalla ("");
+	imprimirMatriz (c);
+	imprimirPantalla ("");
+	imprimirPantalla (c+c);
+	imprimirPantalla (c*c);
+	imprimirPantalla (c-c);
+	imprimirPantalla (c[0][0]);
+	imprimirPantalla (c[1][2]);
+	imprimirPantalla (c[2][0]);
+
+	#################
+	#Definición de un procedimiento
+	def a (x, y) {
+		imprimirPantalla(x);
+	}
+	b = a(1,2);
+	c = a(55,10);
+	def a (x, y) {
+		imprimirPantalla(x+y);
+	}
+	d = a(32,5);
+	
+	#Definición de una función que retorna un STRING
+	def cadena b(x){
+		imprimirPantalla (2+2);
+		retornar "hola"+" "+x;
+	}
+	
+	c = b("camilo");
+	imprimirPantalla (c);
+
+	#Definición del factorial de 'x', definida iterativamente
+	def entero f(x){
+		aux = 1;
+		para (i=x; i>0; i=i-1) {
+			aux = aux * i;
+		}
+		retornar aux;	
+	}
+	d = f(10);
+	imprimirPantalla (d);
+
+	#Definición recursiva del factorial de 'y'
+	def entero g(y){
+		res = 0;
+		si y < 2 {
+			res = 1;
+		}
+		si_no {
+			res = y * g(y-1);
+		}
+		retornar res;
+	}
+	e = g(10);
+	imprimirPantalla (e);
+	
+	#Escribir en archivos
+	limpiarArchivo("file.txt");
+
+	imprimirArchivo("file.txt", 1);
+
+	para i = 0; i < tamanoArchivo("file.txt"); i=i+1 {
+		#imprimirArchivo("file.txt", 1);
+		imprimirPantalla(sen(3.1415)*50*1);
+		#imprimirArchivo("file.txt", sen(3.1415)*50*1);
+	}
+
+	para i = 0; i < tamanoArchivo("file.txt"); i=i+1 {
+		a = leerArchivo("file.txt", i);
+		imprimirPantalla(a);
+	}
+
+
+	para i = 0; i < 5; i=i+1 {
+    		u = aleatorio(5,10);
+    		imprimirPantalla(u);
+    }
+}
+.
