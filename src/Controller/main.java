@@ -24,6 +24,18 @@ public class main {
 
         //View.Codigo homeView = new View.Codigo();
         //homeView.ejem();
+        
+        String archSintactico="C:\\Users\\Andrey\\Desktop\\Z80\\src\\Assets\\AnalizadorSintactico.cup";
+        String[] asintactico = {"-parser", "AnalizadorSintactico", archSintactico};
+        try {
+            java_cup.Main.main(asintactico);
+        } catch (Exception ex) {
+            System.out.println("ERROR A SINTACTICO");
+        }
+        System.out.println("Generado!");
+        /*
+        
+        
         try {
             BufferedReader buffer = new BufferedReader(new FileReader(RutaOrigen));
             AnalizadorLexico analizadorJFlex = new AnalizadorLexico(buffer);
@@ -40,7 +52,7 @@ public class main {
         } catch (Exception e) {
             System.out.println(e.toString());
         }
-
+*/
     }
 
 }
