@@ -30,7 +30,7 @@ public class main {
         try {
             java_cup.Main.main(asintactico);
         } catch (Exception ex) {
-            System.out.println("ERROR A SINTACTICO");
+            System.out.println("ERROR A SINTACTICO "+ex);
         }
         System.out.println("Generado!");
         /*
